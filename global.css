@@ -2281,24 +2281,28 @@ textarea.floating-control {
 .footer-logo-wrap {
   display: inline-flex;
   align-items: center;
-  background: #ffffff;
-  padding: 8px 18px;
+  justify-content: center;
+  background-color: #ffffff !important;
+  padding: 6px 14px;
   border-radius: var(--radius-sm);
-  margin-bottom: 22px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .footer-logo-wrap:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .footer-logo-img {
-  height: 44px;
-  max-width: 180px;
+  height: 32px;
+  max-height: 32px;
+  max-width: 120px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .footer-col h4 {
