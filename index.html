@@ -32,7 +32,7 @@
         </a>
       </div>
       <div class="top-bar-right">
-        <a href="#brochure" class="top-bar-link" onclick="openVideoModal()">Download Brochure</a>
+        <a href="#brochure" class="top-bar-link" onclick="downloadBrochure(event)">Download Brochure</a>
         <span style="opacity: 0.3;">|</span>
         <a href="#lead-form" class="top-bar-link">Online Registration</a>
       </div>
@@ -60,9 +60,10 @@
           <li><a href="#" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#courses" class="nav-link">Courses</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#gallery" class="nav-link">Campus Life</a></li>
           <li><a href="#facilities" class="nav-link">Training Centre</a></li>
           <li><a href="#faculty" class="nav-link">Faculty</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
           <li><a href="#contact-seo" class="nav-link">Contact</a></li>
         </ul>
 
@@ -71,9 +72,11 @@
           <a href="#lead-form" class="btn btn-primary btn-sm">Enroll Now</a>
         </div>
 
-        <!-- Mobile Toggle Button -->
+        <!-- Mobile Toggle Button (Animated 3-Bar Hamburger transforms to X) -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
         </button>
       </nav>
     </div>
@@ -88,7 +91,7 @@
 
     <div class="container" style="position: relative; z-index: 4;">
       <div class="hero-content" data-reveal="fade-in">
-        <div class="hero-badge">
+        <div class="hero-badge pulse-badge">
           <span class="hero-badge-dot"></span>
           India's Benchmark for Reproductive Medicine Training
         </div>
@@ -101,6 +104,10 @@
         <div class="hero-actions">
           <a href="#lead-form" class="btn btn-primary btn-lg">Enroll Now</a>
           <a href="#courses" class="btn btn-outline-white btn-lg">Explore Courses</a>
+          <button type="button" class="btn btn-outline-white btn-lg" onclick="openVideoModal()" style="display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" fill="var(--accent-pink)" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+            Watch Lab Tour
+          </button>
         </div>
       </div>
 
@@ -181,7 +188,7 @@
         <!-- Left Image with Pulsing Sonar Badge -->
         <div class="about-image-wrapper" data-reveal="slide-left">
           <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Embryologist training lab at CEART" class="about-image-main">
-          <div class="about-badge-floating">
+          <div class="about-badge-floating pulse-badge">
             <div class="about-badge-num"><span data-counter="200" data-suffix="+">0</span></div>
             <div class="about-badge-text">
               Embryologists<br>Trained &amp; Certified
@@ -315,6 +322,7 @@
               <textarea id="message" class="floating-control" placeholder="MBBS, M.Sc Biotechnology, B.Sc Life Sciences, etc."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+            <div id="formSuccessMessage" class="form-success-message" role="alert" aria-live="polite"></div>
           </form>
         </div>
       </div>
@@ -647,54 +655,82 @@
         </p>
       </div>
 
-      <div class="campus-gallery-grid" data-reveal="fade-in">
-        <div class="campus-gallery-item span-2">
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" alt="Students in Cleanroom Lab" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">Hands-on Micromanipulation Session</div>
-            <div class="campus-gallery-sub">Batch of 2026 Practical Workshop</div>
+      <!-- Campus Life Slider Container -->
+      <div class="slider-container" id="campusSlider" data-reveal="fade-in">
+        <div class="slider-track">
+          <!-- Slide 1 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item" onclick="openVideoModal()">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Students in Cleanroom Lab" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">Hands-on Micromanipulation</div>
+                <div class="campus-gallery-sub">1:1 Workstation Practice on Narishige Stations</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="campus-gallery-item">
-          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Classroom Presentation" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">Theoretical Grand Rounds</div>
-            <div class="campus-gallery-sub">Interactive Seminars</div>
+          <!-- Slide 2 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item" onclick="openVideoModal()">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="ISO-Certified Cleanroom Embryology Suite" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">ISO Certified Cleanrooms</div>
+                <div class="campus-gallery-sub">Grade-A Laminar Flow &amp; Tri-Gas Incubators</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="campus-gallery-item">
-          <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=600&q=80" alt="Medical Symposium" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">International ART Symposium</div>
-            <div class="campus-gallery-sub">Annual Guest Lecture</div>
+          <!-- Slide 3 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Theoretical Grand Rounds" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">Theoretical Grand Rounds</div>
+                <div class="campus-gallery-sub">Interactive Seminars &amp; Case Study Debriefs</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="campus-gallery-item">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Convocation Ceremony" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">Graduation Convocation</div>
-            <div class="campus-gallery-sub">Celebrating Fellowship Graduates</div>
+          <!-- Slide 4 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item">
+              <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=800&q=80" alt="Laser Hatching Demo" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">Laser Biopsy &amp; PGT Lab</div>
+                <div class="campus-gallery-sub">Advanced Embryo Genetic Screening Demos</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="campus-gallery-item">
-          <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=600&q=80" alt="Research Experimentation" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">Laser Hatching Demo</div>
-            <div class="campus-gallery-sub">Advanced Technologies Lab</div>
+          <!-- Slide 5 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Convocation Ceremony" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">Convocation Ceremony</div>
+                <div class="campus-gallery-sub">Celebrating Certified Clinical Embryologists</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="campus-gallery-item span-2">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Group Discussion" class="campus-gallery-img">
-          <div class="campus-gallery-overlay">
-            <div class="campus-gallery-title">Peer Learning &amp; Case Study Discussions</div>
-            <div class="campus-gallery-sub">Daily Morning Journal Club</div>
+          <!-- Slide 6 -->
+          <div class="slider-slide">
+            <div class="campus-gallery-item" onclick="openVideoModal()">
+              <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80" alt="International ART Symposium" class="campus-gallery-img">
+              <div class="campus-gallery-overlay">
+                <div class="campus-gallery-title">International ART Symposium</div>
+                <div class="campus-gallery-sub">Annual Conference with Global Pioneers</div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Campus Slider Navigation Controls -->
+      <div class="slider-nav-btns" data-reveal="fade-in">
+        <button class="slider-btn-prev" id="campusPrevBtn" aria-label="Previous Campus Photos">&larr;</button>
+        <div class="slider-dots" id="campusDots"></div>
+        <button class="slider-btn-next" id="campusNextBtn" aria-label="Next Campus Photos">&rarr;</button>
       </div>
     </div>
   </section>
@@ -819,51 +855,101 @@
         </p>
       </div>
 
-      <div class="testimonials-grid">
-        <!-- Left: Featured Testimonial Card -->
-        <div class="testimonial-card-featured" data-reveal="slide-left">
-          <div class="star-rating">★★★★★</div>
-          <p class="testimonial-quote">
-            "The individual workstation access at CEART is unmatched. Unlike typical observation-only courses, here I performed over 80 micro-injections personally during the fellowship. Within 3 weeks of completion, I joined an IVF centre in Delhi as a Junior Clinical Embryologist."
-          </p>
-          <div class="testimonial-author-wrap">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Dr. Pooja Meena" class="author-avatar">
-            <div class="author-meta">
-              <h4>Dr. Pooja Meena</h4>
-              <span>Fellowship Graduate (2025) &bull; Now at Apollo Cradle</span>
+      <!-- Testimonials Slider Container -->
+      <div class="slider-container" id="testimonialsSlider" data-reveal="fade-in">
+        <div class="slider-track">
+          <!-- Slide 1 -->
+          <div class="slider-slide">
+            <div class="testimonial-card-slide">
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">
+                "The individual workstation access at CEART is unmatched. Unlike typical observation courses, here I performed over 80 micro-injections personally during the fellowship. Within 3 weeks of completion, I joined an IVF centre in Delhi as a Junior Clinical Embryologist."
+              </p>
+              <div class="testimonial-author-wrap">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Dr. Pooja Meena" class="author-avatar">
+                <div class="author-meta">
+                  <h4>Dr. Pooja Meena</h4>
+                  <span>Fellowship Graduate (2025) &bull; Apollo Cradle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-slide">
+            <div class="testimonial-card-slide">
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">
+                "Setting up my own IUI lab after the 1-week intensive semenology and sperm preparation course was seamless. The hands-on exposure to density gradients and WHO 6th edition analysis gave our clinic full independence."
+              </p>
+              <div class="testimonial-author-wrap">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Dr. Aakash Verma" class="author-avatar">
+                <div class="author-meta">
+                  <h4>Dr. Aakash Verma</h4>
+                  <span>Consultant Gynaecologist &bull; IUI Lab Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-slide">
+            <div class="testimonial-card-slide">
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">
+                "As an M.Sc Biotechnology postgrad, transitioning from academia to clinical IVF seemed daunting. CEART gave me the sterile cleanroom protocol confidence and oocyte denudation precision I needed to get hired immediately."
+              </p>
+              <div class="testimonial-author-wrap">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Ritika Sengupta" class="author-avatar">
+                <div class="author-meta">
+                  <h4>Ritika Sengupta</h4>
+                  <span>Senior Embryologist &bull; Cloudnine Fertility</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slider-slide">
+            <div class="testimonial-card-slide">
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">
+                "I travelled from Dubai specifically for the ICSI mastery &amp; oocyte vitrification workshop. The faculty's precision feedback on micropipette alignment and sperm immobilization was truly world-class."
+              </p>
+              <div class="testimonial-author-wrap">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Dr. Mohit Narang" class="author-avatar">
+                <div class="author-meta">
+                  <h4>Dr. Mohit Narang</h4>
+                  <span>International Fellow &bull; Fertility Specialist (UAE)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="slider-slide">
+            <div class="testimonial-card-slide">
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">
+                "The 1:1 mentorship and laser-assisted hatching demonstrations transformed my technical skillset. CEART's placement cell arranged interviews with 3 leading networks and I was placed within days of finishing."
+              </p>
+              <div class="testimonial-author-wrap">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Dr. Shweta Rawat" class="author-avatar">
+                <div class="author-meta">
+                  <h4>Dr. Shweta Rawat</h4>
+                  <span>Clinical Embryologist &bull; Indira IVF Network</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Right: Video Testimonial Thumbnails -->
-        <div class="video-testimonials-stack" data-reveal="slide-right">
-          <div class="video-test-thumb" onclick="openVideoModal()">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aakash Verma" class="test-thumb-preview">
-            <div class="test-thumb-info">
-              <h5>Dr. Aakash Verma (Gynaecologist)</h5>
-              <p>"Setting up my own IUI lab after the 1-week intensive semenology course."</p>
-              <span style="font-size: 0.78rem; color: var(--accent-pink); font-weight: 700;">▶ Watch 1:40 min review</span>
-            </div>
-          </div>
-
-          <div class="video-test-thumb" onclick="openVideoModal()">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Ritika Sengupta" class="test-thumb-preview">
-            <div class="test-thumb-info">
-              <h5>Ritika Sengupta (M.Sc Biotechnology)</h5>
-              <p>"Transitioned from academic research to clinical embryology with high confidence."</p>
-              <span style="font-size: 0.78rem; color: var(--accent-pink); font-weight: 700;">▶ Watch 2:10 min review</span>
-            </div>
-          </div>
-
-          <div class="video-test-thumb" onclick="openVideoModal()">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Dr. Mohit Narang" class="test-thumb-preview">
-            <div class="test-thumb-info">
-              <h5>Dr. Mohit Narang (International Fellow)</h5>
-              <p>"Travelled from Dubai for the ICSI mastery program. Remarkable attention to detail."</p>
-              <span style="font-size: 0.78rem; color: var(--accent-pink); font-weight: 700;">▶ Watch 2:05 min review</span>
-            </div>
-          </div>
-        </div>
+      <!-- Testimonials Slider Navigation Controls -->
+      <div class="slider-nav-btns" data-reveal="fade-in">
+        <button class="slider-btn-prev" id="testPrevBtn" aria-label="Previous Testimonials">&larr;</button>
+        <div class="slider-dots" id="testDots"></div>
+        <button class="slider-btn-next" id="testNextBtn" aria-label="Next Testimonials">&rarr;</button>
       </div>
     </div>
   </section>
@@ -1406,5 +1492,37 @@
     </div>
   </footer>
 
+  <!-- ================= 25. Ultra-Premium Video Modal Dialog (Cleanroom & Virtual Tour) ================= -->
+  <div class="video-modal-backdrop" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="video-modal-card">
+      <div class="video-modal-header">
+        <div class="video-modal-title">
+          <span class="video-modal-badge">Virtual Tour</span>
+          <h3>CEART Cleanroom &amp; Embryology Training Lab</h3>
+        </div>
+        <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Close video tour">&times;</button>
+      </div>
+      <div class="video-modal-body">
+        <div class="video-frame-wrap">
+          <iframe 
+            id="videoModalIframe" 
+            src="" 
+            title="CEART Virtual Lab Tour" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-modal-footer">
+          <p>
+            Experience our Grade-A ISO cleanrooms, Narishige &amp; RI micromanipulation workstations, laser-assisted hatching systems, and benchtop incubators in Jaipur.
+          </p>
+          <a href="#lead-form" class="btn btn-primary btn-sm" onclick="closeVideoModal()">Enroll for Next Batch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
+
