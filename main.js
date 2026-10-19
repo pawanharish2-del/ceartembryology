@@ -614,8 +614,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1400);
   };
 
-  window.simulateReadArticle = (e, title) => {
-    e.preventDefault();
-    showNotificationToast(`📖 Opening publication: "${title}". Redirecting to clinical repository.`);
+  window.focusEligibilityEnquiry = () => {
+    const leadForm = document.getElementById('lead-form');
+    if (leadForm) {
+      leadForm.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        const nameInput = document.getElementById('fullName');
+        if (nameInput) nameInput.focus();
+      }, 500);
+    }
   };
 });
+
