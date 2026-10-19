@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEART - Centre for Embryology & Assisted Reproductive Technology</title>
+    
+    <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind to use CEART Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ceartPink: '#FF3B7C',
+                        ceartTeal: '#1B7A8B',
+                        ceartNavy: '#142F4B',
+                        ceartCyan: '#3FA9C3',
+                        ceartLight: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling and base font settings */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #142F4B; /* ceartNavy */
+        }
+        h1, h2, h3, h4, h5, h6, .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom subtle shadow for cards */
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(20, 47, 75, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(20, 47, 75, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white border-b-2 border-ceartLight sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-ceartTeal flex items-center justify-center text-white font-heading font-bold text-xl">
+                    C
+                </div>
+                <div class="flex flex-col">
+                    <span class="nav-logo text-2xl font-bold text-ceartTeal tracking-wide leading-none">
+                        CE<span class="text-ceartPink">A</span>RT
+                    </span>
+                    <span class="text-[10px] font-bold text-ceartNavy tracking-widest uppercase mt-1 flex items-center gap-1">
+                        <span class="w-2 border-b border-ceartPink"></span> 
+                        JAIPUR 
+                        <span class="w-2 border-b border-ceartPink"></span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-8 items-center font-heading font-semibold text-sm">
+                <a href="#" class="text-ceartNavy hover:text-ceartCyan transition-colors">Home</a>
+                <a href="#services" class="text-ceartNavy hover:text-ceartCyan transition-colors">Services</a>
+                <a href="#training" class="text-ceartNavy hover:text-ceartCyan transition-colors">Training</a>
+                <a href="#contact" class="text-ceartNavy hover:text-ceartCyan transition-colors">Contact</a>
+                <a href="#consultation" class="bg-ceartPink text-white px-5 py-2.5 rounded-full hover:bg-[#e63570] transition-colors shadow-md hover:shadow-lg">
+                    Book Consultation
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button (Visual Only for Preview) -->
+            <button class="md:hidden text-ceartTeal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-ceartLight relative overflow-hidden">
+        <!-- Decorative Background Circle -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-ceartCyan opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-ceartPink opacity-5 rounded-full blur-2xl"></div>
+
+        <div class="container mx-auto px-6 py-24 md:py-32 relative z-10 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ceartTeal mb-6 max-w-4xl leading-tight">
+                Advancing IVF and Embryology with <span class="text-ceartPink">Precision</span>
+            </h1>
+            <p class="text-lg md:text-xl text-ceartNavy max-w-2xl mb-10 leading-relaxed">
+                Welcome to CEART Jaipur — The premier Centre for Embryology & Assisted Reproductive Technology. We combine cutting-edge science with compassionate care to build families and train the next generation of specialists.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#consultation" class="bg-ceartPink text-white font-heading font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    Book a Consultation
+                </a>
+                <a href="#training" class="bg-white text-ceartTeal border-2 border-ceartTeal font-heading font-semibold text-lg px-8 py-4 rounded-full hover:bg-ceartTeal hover:text-white transition-all duration-300">
+                    Explore Training
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section: Learn | Train | Innovate | Advance IVF -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ceartTeal mb-4">Our Core Pillars</h2>
+                <p class="text-ceartNavy max-w-2xl mx-auto">Committed to excellence in patient care, technological advancement, and specialized medical education.</p>
+                <div class="w-24 h-1 bg-ceartPink mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Learn -->
+                <div class="card-shadow bg-white p-8 rounded-2xl border-t-4 border-ceartPink">
+                    <div class="w-14 h-14 bg-ceartLight rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-ceartCyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ceartNavy mb-3">Learn</h3>
+                    <p class="text-ceartNavy/80 text-sm leading-relaxed">
+                        Access world-class knowledge in reproductive biology. We provide foundational and advanced learning resources for professionals and patients alike.
+                    </p>
+                </div>
+
+                <!-- Card 2: Train -->
+                <div class="card-shadow bg-white p-8 rounded-2xl border-t-4 border-ceartTeal">
+                    <div class="w-14 h-14 bg-ceartLight rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-ceartCyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ceartNavy mb-3">Train</h3>
+                    <p class="text-ceartNavy/80 text-sm leading-relaxed">
+                        Hands-on embryology training programs designed to equip clinicians and scientists with mastery in ICSI, vitrification, and lab management.
+                    </p>
+                </div>
+
+                <!-- Card 3: Innovate -->
+                <div class="card-shadow bg-white p-8 rounded-2xl border-t-4 border-ceartCyan">
+                    <div class="w-14 h-14 bg-ceartLight rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-ceartTeal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ceartNavy mb-3">Innovate</h3>
+                    <p class="text-ceartNavy/80 text-sm leading-relaxed">
+                        Pioneering new methodologies and embracing state-of-the-art technology to continuously improve success rates and patient experiences.
+                    </p>
+                </div>
+
+                <!-- Card 4: Advance IVF -->
+                <div class="card-shadow bg-white p-8 rounded-2xl border-t-4 border-ceartPink">
+                    <div class="w-14 h-14 bg-ceartLight rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-ceartPink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ceartNavy mb-3">Advance IVF</h3>
+                    <p class="text-ceartNavy/80 text-sm leading-relaxed">
+                        Pushing the boundaries of Assisted Reproductive Technology to deliver the highest standard of fertility treatments globally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information / Trust Section -->
+    <section class="py-20 bg-ceartLight">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <div class="bg-ceartTeal rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-bl-full"></div>
+                    <h3 class="text-3xl font-bold mb-6 font-heading">State-of-the-Art Facilities in Jaipur</h3>
+                    <p class="mb-6 opacity-90 leading-relaxed">
+                        Located in the heart of Jaipur, CEART is equipped with the latest laboratory equipment and clean-room technologies essential for successful embryology and IVF procedures.
+                    </p>
+                    <ul class="space-y-4 font-semibold text-sm">
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-ceartPink flex items-center justify-center text-white">✓</span> High-tech ICSI Workstations
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-ceartPink flex items-center justify-center text-white">✓</span> Advanced Cryopreservation
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 rounded-full bg-ceartPink flex items-center justify-center text-white">✓</span> Dedicated Training Modules
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-ceartTeal mb-6 font-heading">Empowering Lives Through Science</h2>
+                <p class="text-ceartNavy mb-6 leading-relaxed">
+                    At the Centre for Embryology & Assisted Reproductive Technology, our mission goes beyond treatment. We are a hub for scientific inquiry, medical education, and compassionate clinical care. 
+                </p>
+                <p class="text-ceartNavy leading-relaxed mb-8">
+                    Whether you are a patient seeking the highest quality of fertility care, or a medical professional looking to elevate your skills in embryology, CEART provides the environment, expertise, and support you need to succeed.
+                </p>
+                <a href="#" class="text-ceartPink font-bold hover:text-ceartTeal transition-colors flex items-center gap-2">
+                    Learn more about our technology 
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ceartNavy text-white pt-16 pb-8 border-t-4 border-ceartPink">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Footer Column 1: Brand -->
+                <div>
+                    <span class="text-3xl font-bold text-white tracking-wide leading-none font-heading mb-4 block">
+                        CE<span class="text-ceartPink">A</span>RT
+                    </span>
+                    <p class="text-ceartLight/70 text-sm leading-relaxed mb-6">
+                        Centre for Embryology & Assisted Reproductive Technology. Dedicated to the advancement of IVF and reproductive sciences.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social placeholders -->
+                        <div class="w-10 h-10 rounded-full bg-ceartTeal flex items-center justify-center hover:bg-ceartPink cursor-pointer transition-colors">
+                            <span class="font-bold text-sm">fb</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-ceartTeal flex items-center justify-center hover:bg-ceartPink cursor-pointer transition-colors">
+                            <span class="font-bold text-sm">in</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-ceartTeal flex items-center justify-center hover:bg-ceartPink cursor-pointer transition-colors">
+                            <span class="font-bold text-sm">x</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-heading border-b border-white/20 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3 text-ceartLight/80 text-sm">
+                        <li><a href="#" class="hover:text-ceartPink transition-colors">About CEART</a></li>
+                        <li><a href="#" class="hover:text-ceartPink transition-colors">IVF Services</a></li>
+                        <li><a href="#" class="hover:text-ceartPink transition-colors">Embryology Training Programs</a></li>
+                        <li><a href="#" class="hover:text-ceartPink transition-colors">Patient Resources</a></li>
+                        <li><a href="#" class="hover:text-ceartPink transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-heading border-b border-white/20 pb-2 inline-block">Contact Jaipur Center</h4>
+                    <ul class="space-y-3 text-ceartLight/80 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ceartPink flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>123 Medical Hub Road,<br>Jaipur, Rajasthan, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-ceartPink flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-ceartPink flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>info@ceartjaipur.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-ceartLight/50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 CEART Jaipur. All Rights Reserved.</p>
+                <p class="font-heading tracking-widest uppercase text-[10px] text-ceartCyan">Learn | Train | Innovate | Advance IVF</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
