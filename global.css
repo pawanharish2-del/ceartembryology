@@ -722,62 +722,7 @@ button, input, select, textarea {
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-
-/* Quick Highlights Strip in Hero */
-.hero-quick-highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  max-width: 860px;
-  margin: 0 auto 35px;
-  text-align: left;
-}
-
-.highlight-pill {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-md);
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--white);
-  transition: var(--transition);
-}
-
-.highlight-pill:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  border-color: var(--soft-cyan);
-}
-
-.highlight-check {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--accent-pink);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 800;
-  flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(255, 59, 124, 0.4);
-}
-
-@media (max-width: 768px) {
-  .hero-quick-highlights {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 25px;
-  }
+  margin-bottom: 40px;
 }
 
 /* Floating Stats Bar with Glassmorphism Overlap */
@@ -794,10 +739,10 @@ button, input, select, textarea {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
-  padding: 28px 36px;
+  padding: 30px 42px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   color: var(--navy-blue);
   transform: translateY(35px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1324,129 +1269,6 @@ textarea.floating-control {
   flex: 1;
 }
 
-/* What Will You Learn & Learning Outcomes */
-.learning-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.learning-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.learning-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-teal);
-}
-
-.learning-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: var(--soft-cyan-light);
-  color: var(--primary-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-  border: 1px solid var(--soft-cyan-border);
-}
-
-.learning-body h4 {
-  font-size: 1.22rem;
-  color: var(--navy-blue);
-  margin-bottom: 8px;
-}
-
-.learning-body p {
-  color: var(--text-muted);
-  font-size: 0.94rem;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .learning-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-}
-
-/* Who Can Apply Eligibility Cards */
-.eligibility-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 45px;
-  align-items: center;
-}
-
-.eligibility-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 22px 0 28px;
-}
-
-.eligibility-tag {
-  background: var(--soft-cyan-light);
-  color: var(--navy-blue);
-  border: 1px solid var(--soft-cyan-border);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.eligibility-tag span {
-  color: var(--accent-pink);
-  font-weight: 800;
-}
-
-.eligibility-card {
-  background: linear-gradient(135deg, var(--navy-blue-surface) 0%, var(--navy-blue-deep) 100%);
-  color: var(--white);
-  padding: 38px;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  position: relative;
-  overflow: hidden;
-}
-
-.eligibility-card::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 140px;
-  height: 140px;
-  background: rgba(255, 59, 124, 0.2);
-  border-radius: 50%;
-  filter: blur(40px);
-}
-
-@media (max-width: 1024px) {
-  .eligibility-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-
 /* 14. Facilities & Resources */
 .facilities-grid {
   display: grid;
@@ -1735,8 +1557,8 @@ textarea.floating-control {
 
 .timeline-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
   position: relative;
   z-index: 2;
 }
@@ -1744,8 +1566,8 @@ textarea.floating-control {
 .timeline-bar-bg {
   position: absolute;
   top: 55px;
-  left: 12%;
-  right: 12%;
+  left: 16%;
+  right: 16%;
   height: 4px;
   background-color: #e2e8f0;
   z-index: 1;
@@ -2154,34 +1976,30 @@ textarea.floating-control {
   box-shadow: var(--shadow-xl);
 }
 
-/* 23. Why CEART (4 Pillars Grid) */
+/* 23. Why CEART (3x2 Grid) */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .why-card {
   background-color: var(--white);
-  padding: 34px 26px;
+  padding: 36px 30px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   border-top: 4px solid var(--primary-teal);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
 }
 
-.why-card:nth-child(2) {
+.why-card:nth-child(2),
+.why-card:nth-child(5) {
   border-top-color: var(--accent-pink);
 }
 
-.why-card:nth-child(3) {
+.why-card:nth-child(3),
+.why-card:nth-child(6) {
   border-top-color: var(--soft-cyan);
-}
-
-.why-card:nth-child(4) {
-  border-top-color: var(--navy-blue);
 }
 
 .why-card:hover {
@@ -2201,19 +2019,16 @@ textarea.floating-control {
   margin-bottom: 22px;
 }
 
-.why-card:nth-child(2) .why-icon {
+.why-card:nth-child(2) .why-icon,
+.why-card:nth-child(5) .why-icon {
   color: var(--accent-pink);
   background-color: var(--accent-pink-subtle);
 }
 
-.why-card:nth-child(3) .why-icon {
+.why-card:nth-child(3) .why-icon,
+.why-card:nth-child(6) .why-icon {
   color: var(--soft-cyan);
   background-color: var(--soft-cyan-light);
-}
-
-.why-card:nth-child(4) .why-icon {
-  color: var(--navy-blue);
-  background-color: rgba(20, 47, 75, 0.08);
 }
 
 .why-icon svg {
@@ -2278,104 +2093,6 @@ textarea.floating-control {
 .career-role-tag:hover svg {
   color: var(--white);
 }
-
-.career-pathways-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-
-@media (max-width: 640px) {
-  .career-pathways-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
-
-.career-pathway-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-md);
-  padding: 16px 18px;
-  transition: var(--transition);
-  backdrop-filter: blur(8px);
-}
-
-.career-pathway-item:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--soft-cyan);
-  transform: translateX(4px);
-}
-
-.career-pathway-bullet {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--accent-pink);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.82rem;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.career-pathway-text {
-  color: rgba(255, 255, 255, 0.94);
-  font-size: 0.94rem;
-  line-height: 1.55;
-  font-weight: 500;
-}
-
-/* Compliance and Disclaimer Boxes */
-.kulki-compliance-box {
-  background: rgba(27, 122, 139, 0.07);
-  border-left: 4px solid var(--primary-teal);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 18px 24px;
-  margin-top: 32px;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--text-body);
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.kulki-compliance-box svg {
-  width: 24px;
-  height: 24px;
-  color: var(--primary-teal);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.learning-disclaimer-box {
-  background: #f8fafc;
-  border: 1px dashed var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.learning-disclaimer-box svg {
-  width: 20px;
-  height: 20px;
-  color: var(--primary-teal);
-  flex-shrink: 0;
-}
-
 
 /* 25. Detailed Info / SEO Content & Sticky Contact */
 .seo-section-grid {
@@ -2997,18 +2714,6 @@ textarea.floating-control {
   .hero-title { font-size: 2.8rem; }
   .courses-grid, .facilities-grid, .faculty-grid, .placed-grid, .why-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .floating-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 24px;
-  }
-  .timeline-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .timeline-bar-bg {
-    display: none;
   }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
