@@ -7,27 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // =========================================================================
-  // 1. Sticky Header Glassmorphism on Scroll
+  // 1. Dual-State Sticky Header (Normal Two-Tier vs Compact Floating)
   // =========================================================================
-  const header = document.querySelector('.main-header');
-  const handleHeaderScroll = () => {
-    if (!header) return;
-    if (window.scrollY > 30) {
-      header.classList.add('header-scrolled');
+  const siteHeaderWrapper = document.getElementById('siteHeaderWrapper');
+  let headerScrollTicking = false;
+
+  const handleHeaderScrollState = () => {
+    if (!siteHeaderWrapper) return;
+    // Activate compact floating header after scrolling ~70px
+    if (window.scrollY > 70) {
+      siteHeaderWrapper.classList.add('is-scrolled');
     } else {
-      header.classList.remove('header-scrolled');
+      siteHeaderWrapper.classList.remove('is-scrolled');
     }
+    headerScrollTicking = false;
   };
 
-  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-  handleHeaderScroll();
+  window.addEventListener('scroll', () => {
+    if (!headerScrollTicking) {
+      window.requestAnimationFrame(handleHeaderScrollState);
+      headerScrollTicking = true;
+    }
+  }, { passive: true });
+  handleHeaderScrollState();
 
   // =========================================================================
-  // 2. Mobile Navigation with Animated Hamburger (Transforms to X)
+  // 2. Navigation Menu & Courses Dropdown Interaction
   // =========================================================================
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
+  const coursesDropdown = document.getElementById('coursesDropdown');
+  const coursesDropdownBtn = document.getElementById('coursesDropdownBtn');
 
+  // Mobile menu toggle
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -36,21 +48,38 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Close when clicking nav links
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        mobileToggle.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close when clicking outside
+    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
         navMenu.classList.remove('open');
         mobileToggle.classList.remove('active');
         mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Courses Dropdown / Accordion Toggle
+  if (coursesDropdown && coursesDropdownBtn) {
+    coursesDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = coursesDropdown.classList.toggle('open');
+      coursesDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close Courses dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (coursesDropdown.classList.contains('open') && !coursesDropdown.contains(e.target)) {
+        coursesDropdown.classList.remove('open');
+        coursesDropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && coursesDropdown.classList.contains('open')) {
+        coursesDropdown.classList.remove('open');
+        coursesDropdownBtn.setAttribute('aria-expanded', 'false');
+        coursesDropdownBtn.focus();
       }
     });
   }
@@ -617,5 +646,21 @@ document.addEventListener('DOMContentLoaded', () => {
   window.simulateReadArticle = (e, title) => {
     e.preventDefault();
     showNotificationToast(`📖 Opening publication: "${title}". Redirecting to clinical repository.`);
+  };
+
+  // Program / Course card selection & smooth scroll to lead form
+  window.selectCourseAndScroll = (courseVal) => {
+    const courseSelect = document.getElementById('courseSelect');
+    const leadForm = document.getElementById('lead-form');
+    if (courseSelect && courseVal) {
+      courseSelect.value = courseVal;
+    }
+    if (leadForm) {
+      leadForm.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        const nameInput = document.getElementById('fullName');
+        if (nameInput) nameInput.focus();
+      }, 500);
+    }
   };
 });
