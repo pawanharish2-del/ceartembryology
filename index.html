@@ -80,7 +80,7 @@
       <div class="main-nav-container">
         <nav class="navbar" aria-label="Main Navigation">
           <!-- Left: School Logo -->
-          <div class="brand-logo" aria-label="CEART Logo">
+          <a href="index.html" class="brand-logo" aria-label="CEART Logo">
             <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
               class="brand-logo-img"
               onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';">
@@ -92,12 +92,12 @@
                 <span class="brand-sub">Embryology Institute</span>
               </div>
             </div>
-          </div>
+          </a>
 
-          <!-- Center: Horizontal Navigation Items (Plain Text UI - No route navigation / hyperlinks) -->
+          <!-- Center: Horizontal Navigation Items -->
           <ul class="nav-menu" id="navMenu">
-            <li class="nav-menu-item"><span class="nav-item active">Home</span></li>
-            <li class="nav-menu-item"><span class="nav-item">About</span></li>
+            <li class="nav-menu-item"><a href="index.html" class="nav-item active">Home</a></li>
+            <li class="nav-menu-item"><a href="about.html" class="nav-item">About</a></li>
             <li class="nav-menu-item nav-item-dropdown" id="coursesDropdown">
               <button type="button" class="nav-item nav-dropdown-trigger" id="coursesDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-controls="coursesDropdownMenu">
                 Courses
@@ -106,20 +106,21 @@
                 </svg>
               </button>
               <div class="nav-dropdown-menu" id="coursesDropdownMenu" role="region" aria-label="Short Term Courses">
-                <div class="dropdown-heading">Short Term Courses</div>
-                <div class="dropdown-item">Advanced Course of Andrology and Embryology</div>
-                <div class="dropdown-item">Micromanipulation and ICSI Hands-on Training</div>
-                <div class="dropdown-item">Certificate Course in Clinical Embryology</div>
-                <div class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</div>
-                <div class="dropdown-item">Basic to Advanced Andrology Certificate Course</div>
+                <div class="dropdown-heading"><a href="programs.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">Short Term Courses <span>View All &rarr;</span></a></div>
+                <a href="programs.html#course-andrology-embryology" class="dropdown-item">Advanced Course of Andrology and Embryology</a>
+                <a href="programs.html#course-icsi" class="dropdown-item">Micromanipulation and ICSI Hands-on Training</a>
+                <a href="programs.html#course-clinical-embryology" class="dropdown-item">Certificate Course in Clinical Embryology</a>
+                <a href="programs.html#course-vitrification" class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</a>
+                <a href="programs.html#course-basic-andrology" class="dropdown-item">Basic to Advanced Andrology Certificate Course</a>
+                <a href="programs.html" class="dropdown-item" style="border-top: 1px solid var(--border-light); margin-top: 6px; padding-top: 10px; color: var(--accent-pink); font-weight: 700;">Explore All 21 Programs &rarr;</a>
               </div>
             </li>
-            <li class="nav-menu-item"><span class="nav-item">Gallery</span></li>
-            <li class="nav-menu-item"><span class="nav-item">Training Centre</span></li>
-            <li class="nav-menu-item"><span class="nav-item">Faculty</span></li>
-            <li class="nav-menu-item"><span class="nav-item">Updates</span></li>
-            <li class="nav-menu-item"><span class="nav-item">Blogs</span></li>
-            <li class="nav-menu-item"><span class="nav-item">Contact</span></li>
+            <li class="nav-menu-item"><a href="#gallery" class="nav-item">Gallery</a></li>
+            <li class="nav-menu-item"><a href="#facilities" class="nav-item">Training Centre</a></li>
+            <li class="nav-menu-item"><a href="faculty.html" class="nav-item">Faculty</a></li>
+            <li class="nav-menu-item"><a href="#highlights" class="nav-item">Updates</a></li>
+            <li class="nav-menu-item"><a href="#blogs" class="nav-item">Blogs</a></li>
+            <li class="nav-menu-item"><a href="#contact-seo" class="nav-item">Contact</a></li>
           </ul>
 
           <!-- Right: Prominent Dark-Blue Rounded "Enroll Now" Button with Right Arrow -->
@@ -1948,10 +1949,10 @@
         <div class="footer-col" data-reveal="slide-up" class="delay-1">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#about">About CEART</a></li>
-            <li><a href="#courses">Academic Courses</a></li>
+            <li><a href="about.html">About CEART</a></li>
+            <li><a href="programs.html">Academic Courses</a></li>
             <li><a href="#facilities">Lab Infrastructure</a></li>
-            <li><a href="#faculty">Faculty Team</a></li>
+            <li><a href="faculty.html">Faculty Team</a></li>
             <li><a href="#placements">Student Placements</a></li>
             <li><a href="#gallery">Campus Gallery</a></li>
           </ul>
@@ -1974,12 +1975,12 @@
         <div class="footer-col" data-reveal="slide-up" class="delay-3">
           <h4>Flagship Courses</h4>
           <ul class="footer-links">
-            <li><a href="#courses">Fellowship in Embryology (6M)</a></li>
-            <li><a href="#courses">ICSI &amp; Micromanipulation (2W)</a></li>
-            <li><a href="#courses">Advanced Semenology &amp; IUI (1W)</a></li>
-            <li><a href="#courses">PG Diploma in ART (1 Year)</a></li>
-            <li><a href="#courses">Vitrification &amp; Cryo Module (1W)</a></li>
-            <li><a href="#courses">Laser Biopsy &amp; PGT Workshop</a></li>
+            <li><a href="programs.html">Fellowship in Embryology (6M)</a></li>
+            <li><a href="programs.html">ICSI &amp; Micromanipulation (2W)</a></li>
+            <li><a href="programs.html">Advanced Semenology &amp; IUI (1W)</a></li>
+            <li><a href="programs.html">PG Diploma in ART (1 Year)</a></li>
+            <li><a href="programs.html">Vitrification &amp; Cryo Module (1W)</a></li>
+            <li><a href="programs.html">Laser Biopsy &amp; PGT Workshop</a></li>
           </ul>
         </div>
       </div>

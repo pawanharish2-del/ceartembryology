@@ -56,6 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Close mobile menu when clicking any nav link
+    navMenu.querySelectorAll('a.nav-item, a.dropdown-item').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // Courses Dropdown / Accordion Toggle

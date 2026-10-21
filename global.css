@@ -604,7 +604,7 @@ button, input, select, textarea {
   gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
-  cursor: default;
+  cursor: pointer;
 }
 
 .brand-logo-img {
@@ -686,7 +686,7 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
   white-space: nowrap;
   transition: color var(--transition-fast);
