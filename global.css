@@ -438,7 +438,8 @@ button, input, select, textarea {
 }
 
 .top-bar-contact-item,
-.top-bar-doc-item {
+.top-bar-doc-item,
+.top-bar-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -455,7 +456,9 @@ button, input, select, textarea {
   cursor: pointer;
 }
 
-.top-bar-doc-item:hover {
+.top-bar-contact-item:hover,
+.top-bar-doc-item:hover,
+.top-bar-link:hover {
   color: var(--white);
 }
 
@@ -503,17 +506,17 @@ button, input, select, textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 88px; /* Approximately 86–90px high */
+  height: 88px; /* Approximately 86-90px high */
   transition: height 0.35s ease;
   position: relative;
   width: 100%;
 }
 
 /* ==========================================================================
-   Scrolled Header State (scrollY > 70px) — Compact Floating Rounded Header
+   Scrolled Header State (scrollY > 70px) -- Compact Floating Rounded Header
    ========================================================================== */
 .site-header-wrapper.is-scrolled {
-  top: 14px; /* 8–16px top spacing */
+  top: 14px; /* 8-16px top spacing */
 }
 
 .site-header-wrapper.is-scrolled .top-utility-bar {
@@ -526,13 +529,13 @@ button, input, select, textarea {
 }
 
 .site-header-wrapper.is-scrolled .main-header {
-  width: calc(100% - 48px); /* 24–26px spacing from left and right edges */
+  width: calc(100% - 48px); /* 24-26px spacing from left and right edges */
   max-width: 1360px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-radius: 16px; /* Approximately 14–16px rounded corners */
+  border-radius: 16px; /* Approximately 14-16px rounded corners */
   border: 1px solid rgba(226, 232, 240, 0.85);
   box-shadow: 0 12px 35px -4px rgba(20, 47, 75, 0.12), 0 4px 14px -2px rgba(20, 47, 75, 0.05);
 }
@@ -542,7 +545,7 @@ button, input, select, textarea {
 }
 
 .site-header-wrapper.is-scrolled .navbar {
-  height: 88px; /* Maintained at 88–92px high */
+  height: 88px; /* Maintained at 88-92px high */
 }
 
 /* Left: School Logo */
@@ -779,7 +782,7 @@ button.nav-item.nav-dropdown-trigger:hover,
 }
 
 .dropdown-item::before {
-  content: '•';
+  content: '\2022';
   color: var(--accent-pink);
   font-size: 1.1rem;
   line-height: 1;
