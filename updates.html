@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements &amp; Updates | CEART Jaipur</title>
+  <meta name="description"
+    content="Stay updated with the latest batch announcements, admission schedules, hands-on workshop dates, and clinical embryology fellowship notifications at CEART Jaipur.">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="canonical" href="https://ceartembryology.com/updates.html">
+  <meta property="og:site_name" content="CEART Embryology">
+  <meta property="og:title" content="Announcements & Updates | CEART Jaipur">
+  <meta property="og:description"
+    content="Latest cohort dates, admission notices, and hands-on clinical embryology training updates from CEART Jaipur.">
+  <meta property="og:url" content="https://ceartembryology.com/updates.html">
+  <meta property="og:type" content="website">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="global.css">
+
+  <!-- Interactive Motion Engine -->
+  <script src="main.js" defer></script>
+
+  <!-- ================= Isolated Scoped Page Styles ================= -->
+  <style>
+    /* Mobile-Safe Container */
+    body,
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* 1. Page Hero Banner */
+    .updates-hero-section {
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 55%, #1a3c61 100%);
+      color: #ffffff;
+      padding: 140px 0 75px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .updates-hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(rgba(0, 201, 167, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(255, 59, 124, 0.05) 1px, transparent 1px);
+      background-size: 32px 32px, 48px 48px;
+      background-position: 0 0, 16px 16px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .updates-hero-glow {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      max-width: 100%;
+      background: radial-gradient(circle, rgba(0, 201, 167, 0.16) 0%, rgba(0, 201, 167, 0) 70%);
+      top: -80px;
+      left: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+    }
+
+    .updates-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Breadcrumb */
+    .updates-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .updates-breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .updates-breadcrumb a:hover {
+      color: var(--soft-cyan);
+    }
+
+    .updates-breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .updates-breadcrumb-active {
+      color: var(--soft-cyan);
+      font-weight: 600;
+    }
+
+    .updates-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 201, 167, 0.12);
+      border: 1px solid rgba(0, 201, 167, 0.35);
+      color: var(--soft-cyan);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .updates-hero-title {
+      font-size: 2.85rem;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .updates-hero-subtitle {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.88);
+      margin: 0 auto;
+      max-width: 680px;
+      font-weight: 500;
+    }
+
+    /* 2. Announcements Feed Section */
+    .announcements-feed-section {
+      padding: 70px 0 95px;
+      background: #f8fafc;
+      min-height: 520px;
+    }
+
+    .announcements-container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .announcements-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    /* Strip Card */
+    .announcement-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 24px;
+      box-shadow: 0 3px 12px rgba(20, 47, 75, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .announcement-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--primary-teal), var(--soft-cyan));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .announcement-card:hover {
+      border-color: rgba(27, 122, 139, 0.4);
+      box-shadow: 0 8px 24px rgba(20, 47, 75, 0.09);
+      transform: translateY(-2px);
+    }
+
+    .announcement-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Left Content Info */
+    .announcement-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* "NEW" Pill Badge */
+    .badge-new {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      flex-shrink: 0;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.7; }
+    }
+
+    .announcement-text-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .announcement-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy-blue);
+      line-height: 1.45;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    /* Right Action Button */
+    .announcement-right {
+      flex-shrink: 0;
+    }
+
+    .btn-announcement-enroll {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy-blue);
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(20, 47, 75, 0.15);
+      border: 1px solid transparent;
+    }
+
+    .btn-announcement-enroll:hover {
+      background: var(--accent-pink);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(255, 59, 124, 0.35);
+    }
+
+    .btn-announcement-enroll .btn-arrow-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-announcement-enroll:hover .btn-arrow-icon {
+      transform: translateX(3px);
+    }
+
+    /* 3. Pre-Footer Admissions Callout Ribbon */
+    .updates-admissions-ribbon {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 60%, #1a3c61 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    .updates-admissions-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .updates-hero-section {
+        padding: 125px 0 55px;
+      }
+
+      .updates-hero-title {
+        font-size: 2.1rem;
+      }
+
+      .updates-hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .announcements-feed-section {
+        padding: 50px 0 75px;
+      }
+
+      .announcement-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 18px;
+      }
+
+      .announcement-left {
+        width: 100%;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .announcement-title {
+        font-size: 0.98rem;
+      }
+
+      .announcement-right {
+        width: 100%;
+      }
+
+      .btn-announcement-enroll {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .updates-admissions-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= Dual-State Sticky Header ================= -->
+  <div class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- 1. Top Utility Bar -->
+    <aside class="top-utility-bar" id="topUtilityBar" aria-label="Quick contact and utility links">
+      <div class="top-bar-container">
+        <div class="top-bar-left">
+          <span class="top-bar-query">Have any questions?</span>
+          <a href="tel:+919876543210" class="top-bar-contact-item" title="Call CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+            </svg>
+            <span class="top-bar-text">+91 98765 43210</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">&bull;</span>
+          <a href="mailto:admissions@ceartembryology.com" class="top-bar-contact-item" title="Email CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span class="top-bar-text">admissions@ceartembryology.com</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">/</span>
+          <a href="mailto:info@ceartembryology.com" class="top-bar-contact-item" title="General Information">
+            <span class="top-bar-text">info@ceartembryology.com</span>
+          </a>
+        </div>
+
+        <div class="top-bar-right">
+          <div class="top-bar-doc-item" onclick="downloadBrochure(event)" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Brochure Download</span>
+          </div>
+          <span class="top-bar-sep" aria-hidden="true">|</span>
+          <div class="top-bar-doc-item" onclick="window.location.href='programs.html#lead-form'" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Registration Form</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. Main Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+      <div class="main-nav-container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <a href="index.html" class="brand-logo" aria-label="CEART Logo">
+            <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';">
+            <div id="brandLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 10px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title">CE<span>A</span>RT</span>
+                <span class="brand-sub">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-menu-item"><a href="index.html" class="nav-item">Home</a></li>
+            <li class="nav-menu-item"><a href="about.html" class="nav-item">About</a></li>
+            <li class="nav-menu-item nav-item-dropdown" id="coursesDropdown">
+              <button type="button" class="nav-item nav-dropdown-trigger" id="coursesDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-controls="coursesDropdownMenu">
+                Courses
+                <svg class="nav-chevron" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" id="coursesDropdownMenu" role="region" aria-label="Short Term Courses">
+                <div class="dropdown-heading"><a href="programs.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">Short Term Courses <span>View All &rarr;</span></a></div>
+                <a href="course-andrology-embryology.html" class="dropdown-item">Advanced Course of Andrology and Embryology</a>
+                <a href="course-icsi-micromanipulation.html" class="dropdown-item">Micromanipulation and ICSI Hands-on Training</a>
+                <a href="course-clinical-embryology.html" class="dropdown-item">Certificate Course in Clinical Embryology</a>
+                <a href="course-cryopreservation-vitrification.html" class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</a>
+                <a href="course-basic-advanced-andrology.html" class="dropdown-item">Basic to Advanced Andrology Certificate Course</a>
+                <a href="programs.html" class="dropdown-item" style="border-top: 1px solid var(--border-light); margin-top: 6px; padding-top: 10px; color: var(--accent-pink); font-weight: 700;">Explore All 21 Programs &rarr;</a>
+              </div>
+            </li>
+            <li class="nav-menu-item"><a href="gallery.html" class="nav-item">Gallery</a></li>
+            <li class="nav-menu-item"><a href="training-centre.html" class="nav-item">Training Centre</a></li>
+            <li class="nav-menu-item"><a href="faculty.html" class="nav-item">Faculty</a></li>
+            <li class="nav-menu-item"><a href="updates.html" class="nav-item active">Updates</a></li>
+            <li class="nav-menu-item"><a href="index.html#blogs" class="nav-item">Blogs</a></li>
+            <li class="nav-menu-item"><a href="index.html#contact-seo" class="nav-item">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="btn-navy-enroll" id="headerEnrollBtn" onclick="window.location.href='programs.html#lead-form'">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- ================= 1. Page Header Section ================= -->
+    <section class="updates-hero-section">
+      <div class="updates-hero-glow"></div>
+      <div class="container updates-hero-content">
+        <!-- Breadcrumb -->
+        <div class="updates-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="updates-breadcrumb-sep">&gt;</span>
+          <span class="updates-breadcrumb-active">Updates</span>
+        </div>
+
+        <div>
+          <div class="updates-pill-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            Official Notifications
+          </div>
+        </div>
+
+        <h1 class="updates-hero-title">
+          Announcement And <span class="gradient-text">Updates</span>
+        </h1>
+        <p class="updates-hero-subtitle">
+          Latest Announcements
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 2. Announcements Feed ================= -->
+    <section class="announcements-feed-section">
+      <div class="container announcements-container">
+        <div class="announcements-list">
+
+          <!-- Item 1 -->
+          <div class="announcement-card" data-reveal="slide-up">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Admission Opening Soon - Clinical Embryology Flagship (1-Year Program)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.05s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Upcoming Cohort - Advanced Hands-on Clinical Embryology (1-Month Intensive)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.1s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Limited Seats Available - Advanced ICSI Micromanipulation (2-Week Hands-on Batch)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.15s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Admission Opening Soon - Fellowship in Reproductive Medicine (1-Year Clinical Track)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.2s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Registrations Open - Cryopreservation &amp; Vitrification Practical Training (2-Week Workshop)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.25s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Admission Opening Soon - Basic to Advanced Andrology Certificate Course &amp; Lab Management</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.3s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">New Batch Announced - Embryology Lab QA/QC &amp; Accreditation Protocols (1-Week)</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="announcement-card" data-reveal="slide-up" style="transition-delay: 0.35s;">
+            <div class="announcement-left">
+              <span class="badge-new">
+                <span class="badge-dot"></span>
+                NEW
+              </span>
+              <div class="announcement-text-wrap">
+                <h3 class="announcement-title">Specialized Training - Certificate IVF Nursing Course &amp; Patient Care Upskilling</h3>
+              </div>
+            </div>
+            <div class="announcement-right">
+              <a href="programs.html#lead-form" class="btn-announcement-enroll">
+                <span>Enroll Now</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. Pre-Footer Admissions Callout Ribbon ================= -->
+    <section class="updates-admissions-ribbon">
+      <div class="container">
+        <div class="updates-admissions-box">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 201, 167, 0.18); border: 1px solid rgba(0, 201, 167, 0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--soft-cyan);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.55rem; margin-bottom: 6px; font-weight: 700;">Have questions? Talk to our admissions team</h3>
+              <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin: 0; max-width: 620px;">
+                Get personalized batch guidance, eligibility assessments, and detailed fee structure information directly from our senior academic counselors.
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0;">
+            <a href="programs.html#lead-form" class="btn btn-secondary">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #fff;">
+              <span>Call +91 98765 43210</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal="slide-up">
+          <a href="index.html" class="footer-brand-link">
+            <div class="footer-logo-wrap"
+              style="background-color: #ffffff; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+              <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+                class="footer-logo-img"
+                style="height: 32px; max-height: 32px; max-width: 120px; width: auto; object-fit: contain; display: block;"
+                onerror="this.parentElement.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';">
+            </div>
+            <div id="footerLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 12px; margin-bottom: 22px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title" style="color: #fff;">CE<span style="color: var(--accent-pink);">A</span>RT</span>
+                <span class="brand-sub" style="color: var(--soft-cyan);">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+          <p>
+            Centre for Embryology &amp; Assisted Reproductive Technology. Dedicated to advancing clinical excellence and
+            empowering medical specialists with hands-on reproductive laboratory expertise.
+          </p>
+          <div class="footer-socials">
+            <a href="#facebook" class="footer-social-btn" aria-label="Facebook">fb</a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="LinkedIn">in</a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Twitter">x</a>
+            <a href="#instagram" class="footer-social-btn" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-1">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About CEART</a></li>
+            <li><a href="programs.html">Academic Courses</a></li>
+            <li><a href="training-centre.html">Lab Infrastructure</a></li>
+            <li><a href="faculty.html">Faculty Team</a></li>
+            <li><a href="index.html#placements">Student Placements</a></li>
+            <li><a href="gallery.html">Campus Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-2">
+          <h4>Policy &amp; Help</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#admission-process">Admission Guidelines</a></li>
+            <li><a href="index.html#faqs">Frequently Asked Questions</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="index.html#hostel">Hostel &amp; Stay Guidance</a></li>
+            <li><a href="index.html#contact-seo">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-3">
+          <h4>Flagship Courses</h4>
+          <ul class="footer-links">
+            <li><a href="course-andrology-embryology.html">Andrology &amp; Embryology (6M)</a></li>
+            <li><a href="course-icsi-micromanipulation.html">ICSI &amp; Micromanipulation (2W)</a></li>
+            <li><a href="course-clinical-embryology.html">Clinical Embryology (1M/1Y)</a></li>
+            <li><a href="course-cryopreservation-vitrification.html">Vitrification &amp; Cryo (2W)</a></li>
+            <li><a href="course-basic-advanced-andrology.html">Basic to Advanced Andrology</a></li>
+            <li><a href="programs.html">Explore All 21 Programs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 CEART Institute. All Rights Reserved. Reg. under ART &amp; Medical Education Guidelines.
+        </div>
+        <div>
+          Designed for Clinical Precision &bull; <a href="#">Back to top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
