@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Get In Touch | CEART Jaipur</title>
+  <meta name="description"
+    content="Contact CEART Jaipur. Connect with our academic counselors for clinical embryology admissions, batch schedules, fees, and hands-on lab visits at Kulki IVF Centre.">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="canonical" href="https://ceartembryology.com/contact.html">
+  <meta property="og:site_name" content="CEART Embryology">
+  <meta property="og:title" content="Contact Us | Get In Touch | CEART Jaipur">
+  <meta property="og:description"
+    content="Have questions about our clinical embryology fellowships, andrology courses, or hands-on training? Get in touch with CEART Jaipur today.">
+  <meta property="og:url" content="https://ceartembryology.com/contact.html">
+  <meta property="og:type" content="website">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="global.css">
+
+  <!-- Interactive Motion Engine -->
+  <script src="main.js" defer></script>
+
+  <!-- ================= Isolated Scoped Page Styles ================= -->
+  <style>
+    /* Mobile-Safe Container */
+    body,
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* 1. Page Header Section */
+    .contact-hero-section {
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 55%, #1a3c61 100%);
+      color: #ffffff;
+      padding: 140px 0 75px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .contact-hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(rgba(0, 201, 167, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(255, 59, 124, 0.05) 1px, transparent 1px);
+      background-size: 32px 32px, 48px 48px;
+      background-position: 0 0, 16px 16px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .contact-hero-glow {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      max-width: 100%;
+      background: radial-gradient(circle, rgba(0, 201, 167, 0.16) 0%, rgba(0, 201, 167, 0) 70%);
+      top: -80px;
+      left: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Breadcrumbs */
+    .contact-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .contact-breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-breadcrumb a:hover {
+      color: var(--soft-cyan);
+    }
+
+    .contact-breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .contact-breadcrumb-active {
+      color: var(--soft-cyan);
+      font-weight: 600;
+    }
+
+    /* Soft Lavender Pill Badge */
+    .contact-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ede9fe;
+      border: 1px solid #ddd6fe;
+      color: #5b21b6;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .contact-hero-title {
+      font-size: 2.85rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .contact-hero-subtitle {
+      font-size: 1.12rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.88);
+      margin: 0 auto;
+      max-width: 680px;
+      font-weight: 500;
+    }
+
+    /* 2. Main Two-Column Inquiry & Map Section */
+    .contact-main-section {
+      padding: 75px 0 85px;
+      background: #f8fafc;
+    }
+
+    .contact-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    /* Left Column: Form Card */
+    .contact-form-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 38px 34px;
+      box-shadow: 0 4px 20px rgba(20, 47, 75, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .form-header {
+      margin-bottom: 26px;
+    }
+
+    .form-header-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--navy-blue);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .form-header-desc {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy-blue);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.94rem;
+      font-family: inherit;
+      color: var(--navy-blue);
+      background: #f8fafc;
+      transition: all 0.25s ease;
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      background: #ffffff;
+      border-color: var(--primary-teal);
+      box-shadow: 0 0 0 3px rgba(27, 122, 139, 0.12);
+    }
+
+    /* Mobile Number with +91 Country Code Pill */
+    .phone-input-group {
+      display: flex;
+      width: 100%;
+    }
+
+    .country-code-pill {
+      background: #e2e8f0;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      padding: 0 16px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    .phone-input {
+      border-radius: 0 8px 8px 0 !important;
+      flex: 1;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .btn-contact-submit {
+      width: 100%;
+      background: var(--navy-blue);
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(20, 47, 75, 0.2);
+    }
+
+    .btn-contact-submit:hover {
+      background: var(--accent-pink);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 59, 124, 0.35);
+    }
+
+    .btn-contact-submit .btn-arrow-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-contact-submit:hover .btn-arrow-icon {
+      transform: translateX(4px);
+    }
+
+    /* Form Feedback Message */
+    .form-status-msg {
+      display: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .form-status-msg.success {
+      display: block;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    /* Right Column: Campus Map Card */
+    .contact-map-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(20, 47, 75, 0.05);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .map-frame-wrap {
+      width: 100%;
+      flex-grow: 1;
+      min-height: 380px;
+      position: relative;
+      background: #e2e8f0;
+    }
+
+    .map-frame-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      min-height: 380px;
+    }
+
+    /* Floating Info Card Overlay */
+    .map-info-overlay {
+      padding: 24px 28px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .map-info-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy-blue);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .map-info-sub {
+      font-size: 0.88rem;
+      color: var(--primary-teal);
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .map-info-addr {
+      font-size: 0.86rem;
+      color: var(--text-body);
+      line-height: 1.5;
+      margin: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .map-info-addr svg {
+      color: var(--accent-pink);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .btn-maps-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      align-self: flex-start;
+      margin-top: 4px;
+      padding: 9px 18px;
+      background: #f1f5f9;
+      color: var(--navy-blue);
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-maps-action:hover {
+      background: var(--navy-blue);
+      color: #ffffff;
+      border-color: var(--navy-blue);
+    }
+
+    /* 3. Three-Card Direct Contact Information Row */
+    .contact-info-section {
+      padding: 20px 0 85px;
+      background: #f8fafc;
+    }
+
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .info-box-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(20, 47, 75, 0.04);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-box-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-teal), var(--soft-cyan));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .info-box-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(20, 47, 75, 0.1);
+      border-color: rgba(27, 122, 139, 0.3);
+    }
+
+    .info-box-card:hover::before {
+      opacity: 1;
+    }
+
+    .info-box-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(27, 122, 139, 0.1);
+      color: var(--primary-teal);
+      border: 1px solid rgba(27, 122, 139, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .info-box-card:hover .info-box-icon {
+      background: var(--navy-blue);
+      color: var(--soft-cyan);
+      transform: scale(1.08);
+    }
+
+    .info-box-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy-blue);
+      margin-bottom: 12px;
+    }
+
+    .info-box-details {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-body);
+      margin: 0;
+    }
+
+    .info-box-details a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .info-box-details a:hover {
+      color: var(--primary-teal);
+    }
+
+    /* 4. Pre-Footer Admissions Callout Ribbon */
+    .contact-admissions-ribbon {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 60%, #1a3c61 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    .contact-admissions-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 991px) {
+      .contact-split-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero-section {
+        padding: 125px 0 55px;
+      }
+
+      .contact-hero-title {
+        font-size: 2.1rem;
+      }
+
+      .contact-hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .contact-form-card {
+        padding: 26px 20px;
+      }
+
+      .map-frame-wrap {
+        min-height: 280px;
+      }
+
+      .contact-admissions-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= Dual-State Sticky Header ================= -->
+  <div class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- 1. Top Utility Bar -->
+    <aside class="top-utility-bar" id="topUtilityBar" aria-label="Quick contact and utility links">
+      <div class="top-bar-container">
+        <div class="top-bar-left">
+          <span class="top-bar-query">Have any questions?</span>
+          <a href="tel:+919876543210" class="top-bar-contact-item" title="Call CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+            </svg>
+            <span class="top-bar-text">+91 98765 43210</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">&bull;</span>
+          <a href="mailto:admissions@ceartembryology.com" class="top-bar-contact-item" title="Email CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span class="top-bar-text">admissions@ceartembryology.com</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">/</span>
+          <a href="mailto:info@ceartembryology.com" class="top-bar-contact-item" title="General Information">
+            <span class="top-bar-text">info@ceartembryology.com</span>
+          </a>
+        </div>
+
+        <div class="top-bar-right">
+          <div class="top-bar-doc-item" onclick="downloadBrochure(event)" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Brochure Download</span>
+          </div>
+          <span class="top-bar-sep" aria-hidden="true">|</span>
+          <div class="top-bar-doc-item" onclick="document.getElementById('contactFormCard').scrollIntoView({behavior: 'smooth'})" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Registration Form</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. Main Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+      <div class="main-nav-container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <a href="index.html" class="brand-logo" aria-label="CEART Logo">
+            <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';">
+            <div id="brandLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 10px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title">CE<span>A</span>RT</span>
+                <span class="brand-sub">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-menu-item"><a href="index.html" class="nav-item">Home</a></li>
+            <li class="nav-menu-item"><a href="about.html" class="nav-item">About</a></li>
+            <li class="nav-menu-item nav-item-dropdown" id="coursesDropdown">
+              <button type="button" class="nav-item nav-dropdown-trigger" id="coursesDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-controls="coursesDropdownMenu">
+                Courses
+                <svg class="nav-chevron" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" id="coursesDropdownMenu" role="region" aria-label="Short Term Courses">
+                <div class="dropdown-heading"><a href="programs.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">Short Term Courses <span>View All &rarr;</span></a></div>
+                <a href="course-andrology-embryology.html" class="dropdown-item">Advanced Course of Andrology and Embryology</a>
+                <a href="course-icsi-micromanipulation.html" class="dropdown-item">Micromanipulation and ICSI Hands-on Training</a>
+                <a href="course-clinical-embryology.html" class="dropdown-item">Certificate Course in Clinical Embryology</a>
+                <a href="course-cryopreservation-vitrification.html" class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</a>
+                <a href="course-basic-advanced-andrology.html" class="dropdown-item">Basic to Advanced Andrology Certificate Course</a>
+                <a href="programs.html" class="dropdown-item" style="border-top: 1px solid var(--border-light); margin-top: 6px; padding-top: 10px; color: var(--accent-pink); font-weight: 700;">Explore All 21 Programs &rarr;</a>
+              </div>
+            </li>
+            <li class="nav-menu-item"><a href="gallery.html" class="nav-item">Gallery</a></li>
+            <li class="nav-menu-item"><a href="training-centre.html" class="nav-item">Training Centre</a></li>
+            <li class="nav-menu-item"><a href="faculty.html" class="nav-item">Faculty</a></li>
+            <li class="nav-menu-item"><a href="updates.html" class="nav-item">Updates</a></li>
+            <li class="nav-menu-item"><a href="blogs.html" class="nav-item">Blogs</a></li>
+            <li class="nav-menu-item"><a href="contact.html" class="nav-item active">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="btn-navy-enroll" id="headerEnrollBtn" onclick="document.getElementById('contactFormCard').scrollIntoView({behavior: 'smooth'})">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- ================= 1. Page Header Section ================= -->
+    <section class="contact-hero-section">
+      <div class="contact-hero-glow"></div>
+      <div class="container contact-hero-content">
+        <!-- Breadcrumbs -->
+        <div class="contact-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="contact-breadcrumb-sep">&gt;</span>
+          <span class="contact-breadcrumb-active">Contact Us</span>
+        </div>
+
+        <div>
+          <div class="contact-pill-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            CONTACT US
+          </div>
+        </div>
+
+        <h1 class="contact-hero-title">
+          Get In <span class="gradient-text">Touch</span>
+        </h1>
+        <p class="contact-hero-subtitle">
+          We are here to answer your questions regarding clinical embryology fellowships, upcoming batch schedules, and laboratory training.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 2. Two-Column Inquiry & Map Section (50/50 Split) ================= -->
+    <section class="contact-main-section">
+      <div class="container">
+        <div class="contact-split-grid">
+
+          <!-- Left Column: Admissions Enquiry Form Card -->
+          <div class="contact-form-card" id="contactFormCard" data-reveal="slide-right">
+            <div class="form-header">
+              <h2 class="form-header-title">Admissions &amp; Academic Enquiry</h2>
+              <p class="form-header-desc">
+                Fill out the form below to receive syllabus breakdowns, fee schedules, and upcoming batch details from our faculty advisors.
+              </p>
+            </div>
+
+            <form class="contact-form" id="admissionsContactForm" onsubmit="handleContactSubmit(event)">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="contactFullName" class="form-label">Full Name *</label>
+                <input type="text" id="contactFullName" name="fullName" class="form-input" placeholder="Enter your name" required>
+              </div>
+
+              <!-- Mobile Number (WhatsApp) -->
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Mobile Number (WhatsApp) *</label>
+                <div class="phone-input-group">
+                  <span class="country-code-pill">+91</span>
+                  <input type="tel" id="contactPhone" name="phone" class="form-input phone-input" placeholder="Enter your phone" pattern="[0-9]{10}" required>
+                </div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="Enter your email" required>
+              </div>
+
+              <!-- Select Course Dropdown -->
+              <div class="form-group">
+                <label for="contactCourse" class="form-label">Select Course *</label>
+                <select id="contactCourse" name="course" class="form-select" required>
+                  <option value="" disabled selected>Select Course</option>
+                  <option value="Clinical Embryology Flagship (1 Year)">Clinical Embryology (Flagship 1-Year)</option>
+                  <option value="Advanced Hands-on Clinical Embryology (1 Month)">Advanced Hands-on Clinical Embryology (1 Month)</option>
+                  <option value="Advanced Course of Andrology and Embryology">Advanced Course of Andrology and Embryology</option>
+                  <option value="Micromanipulation and ICSI Hands-on Training (2 Weeks)">Micromanipulation and ICSI Hands-on Training (2 Weeks)</option>
+                  <option value="Cryopreservation/Vitrification and Embryology Lab (2 Weeks)">Cryopreservation/Vitrification and Embryology Lab (2 Weeks)</option>
+                  <option value="Basic to Advanced Andrology Certificate Course">Basic to Advanced Andrology Certificate Course</option>
+                  <option value="Fellowship in Reproductive Medicine (1 Year)">Fellowship in Reproductive Medicine (1 Year)</option>
+                  <option value="Embryology Lab QA/QC (1 Week)">Embryology Lab QA/QC (1 Week)</option>
+                  <option value="Certificate IVF Nursing Course (1 Month)">Certificate IVF Nursing Course (1 Month)</option>
+                </select>
+              </div>
+
+              <!-- Textarea Questions -->
+              <div class="form-group">
+                <label for="contactQuestions" class="form-label">Any specific questions? (Optional)</label>
+                <textarea id="contactQuestions" name="questions" class="form-textarea" placeholder="Ask us anything about the course, fees, or admission process..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-contact-submit" id="contactSubmitBtn">
+                <span>Submit</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div id="contactFormStatus" class="form-status-msg"></div>
+            </form>
+          </div>
+
+          <!-- Right Column: Interactive Campus Map Card -->
+          <div class="contact-map-card" data-reveal="slide-left">
+            <div class="map-frame-wrap">
+              <iframe
+                title="CEART Jaipur Campus Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.23846682705!2d75.7288636!3d26.9064049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db410c5980757%3A0x600d8f074d008bb7!2sKulki%20IVF%20Centre!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- Floating Info Card Overlay -->
+            <div class="map-info-overlay">
+              <h3 class="map-info-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-teal);">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                  <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                  <line x1="15" y1="22" x2="15" y2="22.01"></line>
+                </svg>
+                CEART JAIPUR
+              </h3>
+              <p class="map-info-sub">Centre for Embryology &amp; Assisted Reproductive Technology (Associated with Kulki IVF Centre)</p>
+              <p class="map-info-addr">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <span>Near Kulki IVF Centre, Tonk Road / Gopalpura Bypass, Jaipur, Rajasthan 302015, India</span>
+              </p>
+              <a href="https://maps.google.com/?q=Kulki+IVF+Centre+Jaipur" target="_blank" rel="noopener noreferrer" class="btn-maps-action">
+                <span>Open in Maps</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. Three-Card Direct Contact Information Row ================= -->
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-cards-grid">
+
+          <!-- Card 1: Call Now -->
+          <div class="info-box-card" data-reveal="slide-up">
+            <div class="info-box-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3 class="info-box-title">Call Now</h3>
+            <p class="info-box-details">
+              <a href="tel:+919876543210">+91 98765 43210</a><br>
+              <a href="tel:+919870109545">+91 98701 09545</a><br>
+              <span style="font-size: 0.8rem; color: #64748b;">Mon - Sat: 9:00 AM - 7:00 PM</span>
+            </p>
+          </div>
+
+          <!-- Card 2: Location -->
+          <div class="info-box-card" data-reveal="slide-up" style="transition-delay: 0.1s;">
+            <div class="info-box-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="info-box-title">Location</h3>
+            <p class="info-box-details">
+              <strong>CEART Jaipur</strong><br>
+              In Association with Kulki IVF Centre<br>
+              Jaipur, Rajasthan 302015, India
+            </p>
+          </div>
+
+          <!-- Card 3: Email Now -->
+          <div class="info-box-card" data-reveal="slide-up" style="transition-delay: 0.2s;">
+            <div class="info-box-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <h3 class="info-box-title">Email Now</h3>
+            <p class="info-box-details">
+              <a href="mailto:admissions@ceartjaipur.com">admissions@ceartjaipur.com</a><br>
+              <a href="mailto:admissions@ceartembryology.com">admissions@ceartembryology.com</a><br>
+              <a href="mailto:info@ceartembryology.com">info@ceartembryology.com</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. Pre-Footer Admissions Callout Ribbon ================= -->
+    <section class="contact-admissions-ribbon">
+      <div class="container">
+        <div class="contact-admissions-box">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 201, 167, 0.18); border: 1px solid rgba(0, 201, 167, 0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--soft-cyan);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.55rem; margin-bottom: 6px; font-weight: 700;">Have questions? Talk to our admissions team</h3>
+              <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin: 0; max-width: 620px;">
+                Consult with our senior embryology mentors to confirm your upcoming batch dates and workshop schedules.
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0;">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('contactFormCard').scrollIntoView({behavior: 'smooth'})">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #fff;">
+              <span>Call +91 98765 43210</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal="slide-up">
+          <a href="index.html" class="footer-brand-link">
+            <div class="footer-logo-wrap"
+              style="background-color: #ffffff; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+              <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+                class="footer-logo-img"
+                style="height: 32px; max-height: 32px; max-width: 120px; width: auto; object-fit: contain; display: block;"
+                onerror="this.parentElement.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';">
+            </div>
+            <div id="footerLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 12px; margin-bottom: 22px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title" style="color: #fff;">CE<span style="color: var(--accent-pink);">A</span>RT</span>
+                <span class="brand-sub" style="color: var(--soft-cyan);">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+          <p>
+            Centre for Embryology &amp; Assisted Reproductive Technology. Dedicated to advancing clinical excellence and
+            empowering medical specialists with hands-on reproductive laboratory expertise.
+          </p>
+          <div class="footer-socials">
+            <a href="#facebook" class="footer-social-btn" aria-label="Facebook">fb</a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="LinkedIn">in</a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Twitter">x</a>
+            <a href="#instagram" class="footer-social-btn" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-1">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About CEART</a></li>
+            <li><a href="programs.html">Academic Courses</a></li>
+            <li><a href="training-centre.html">Lab Infrastructure</a></li>
+            <li><a href="faculty.html">Faculty Team</a></li>
+            <li><a href="index.html#placements">Student Placements</a></li>
+            <li><a href="gallery.html">Campus Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-2">
+          <h4>Policy &amp; Help</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#admission-process">Admission Guidelines</a></li>
+            <li><a href="index.html#faqs">Frequently Asked Questions</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="index.html#hostel">Hostel &amp; Stay Guidance</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-3">
+          <h4>Flagship Courses</h4>
+          <ul class="footer-links">
+            <li><a href="course-andrology-embryology.html">Andrology &amp; Embryology (6M)</a></li>
+            <li><a href="course-icsi-micromanipulation.html">ICSI &amp; Micromanipulation (2W)</a></li>
+            <li><a href="course-clinical-embryology.html">Clinical Embryology (1M/1Y)</a></li>
+            <li><a href="course-cryopreservation-vitrification.html">Vitrification &amp; Cryo (2W)</a></li>
+            <li><a href="course-basic-advanced-andrology.html">Basic to Advanced Andrology</a></li>
+            <li><a href="programs.html">Explore All 21 Programs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 CEART Institute. All Rights Reserved. Reg. under ART &amp; Medical Education Guidelines.
+        </div>
+        <div>
+          Designed for Clinical Precision &bull; <a href="#">Back to top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Native Form Submission Handler Script ================= -->
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      var form = document.getElementById('admissionsContactForm');
+      var statusMsg = document.getElementById('contactFormStatus');
+      var submitBtn = document.getElementById('contactSubmitBtn');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Submitting Enquiry...</span>';
+      submitBtn.disabled = true;
+
+      setTimeout(function () {
+        submitBtn.innerHTML = '<span>Enquiry Submitted &check;</span>';
+        statusMsg.className = 'form-status-msg success';
+        statusMsg.innerHTML = '&check; Thank you! Your admissions enquiry has been received. Our senior academic counselor will call you within 24 hours.';
+        form.reset();
+
+        setTimeout(function () {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+        }, 4000);
+      }, 1000);
+    }
+  </script>
+
+</body>
+
+</html>
