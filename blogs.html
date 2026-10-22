@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Embryology Blogs | Insights &amp; Clinical Guides | CEART Jaipur</title>
+  <meta name="description"
+    content="Insights, career guides, laboratory protocols, and expert reproductive science updates for clinical embryologists, IVF specialists, and ART students at CEART Jaipur.">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="canonical" href="https://ceartembryology.com/blogs.html">
+  <meta property="og:site_name" content="CEART Embryology">
+  <meta property="og:title" content="Our Embryology Blogs | CEART Jaipur">
+  <meta property="og:description"
+    content="Insights, guides, and updates on embryology, ART, and reproductive science for students, professionals, and curious minds.">
+  <meta property="og:url" content="https://ceartembryology.com/blogs.html">
+  <meta property="og:type" content="website">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="global.css">
+
+  <!-- Interactive Motion Engine -->
+  <script src="main.js" defer></script>
+
+  <!-- ================= Isolated Scoped Page Styles ================= -->
+  <style>
+    /* Mobile-Safe Container */
+    body,
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* 1. Page Header Section */
+    .blog-hero-section {
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 55%, #1a3c61 100%);
+      color: #ffffff;
+      padding: 140px 0 75px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .blog-hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(rgba(0, 201, 167, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(255, 59, 124, 0.05) 1px, transparent 1px);
+      background-size: 32px 32px, 48px 48px;
+      background-position: 0 0, 16px 16px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .blog-hero-glow {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      max-width: 100%;
+      background: radial-gradient(circle, rgba(0, 201, 167, 0.16) 0%, rgba(0, 201, 167, 0) 70%);
+      top: -80px;
+      left: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+    }
+
+    .blog-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Breadcrumbs */
+    .blog-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .blog-breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .blog-breadcrumb a:hover {
+      color: var(--soft-cyan);
+    }
+
+    .blog-breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .blog-breadcrumb-active {
+      color: var(--soft-cyan);
+      font-weight: 600;
+    }
+
+    .blog-hero-title {
+      font-size: 2.85rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .blog-hero-subtitle {
+      font-size: 1.12rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.88);
+      margin: 0 auto;
+      max-width: 720px;
+      font-weight: 500;
+    }
+
+    /* 2. Search & Category Filter Bar */
+    .blog-filter-section {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 24px 0;
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      box-shadow: 0 4px 14px rgba(20, 47, 75, 0.03);
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .search-box-wrap {
+      position: relative;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 18px 12px 46px;
+      border-radius: 50px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--navy-blue);
+      background: #f8fafc;
+      transition: all 0.25s ease;
+      outline: none;
+    }
+
+    .search-input:focus {
+      background: #ffffff;
+      border-color: var(--primary-teal);
+      box-shadow: 0 0 0 4px rgba(27, 122, 139, 0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      pointer-events: none;
+    }
+
+    .category-pills-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .category-pill {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      user-select: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .category-pill:hover {
+      background: #e2e8f0;
+      color: var(--navy-blue);
+      transform: translateY(-1px);
+    }
+
+    .category-pill.active {
+      background: var(--navy-blue);
+      color: #ffffff;
+      border-color: var(--navy-blue);
+      box-shadow: 0 4px 12px rgba(20, 47, 75, 0.2);
+    }
+
+    /* 3. Main Two-Column Layout */
+    .blog-main-section {
+      padding: 60px 0 90px;
+      background: #f8fafc;
+    }
+
+    .blog-layout-grid {
+      display: grid;
+      grid-template-columns: 2.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Left Column: 9-Card Grid */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .article-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(20, 47, 75, 0.04);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(20, 47, 75, 0.1);
+      border-color: rgba(27, 122, 139, 0.35);
+    }
+
+    .article-thumb-wrap {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background: #0e1e30;
+    }
+
+    .article-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .article-card:hover .article-thumb {
+      transform: scale(1.06);
+    }
+
+    .article-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+    }
+
+    .article-tag {
+      background: rgba(27, 122, 139, 0.1);
+      color: var(--primary-teal);
+      border: 1px solid rgba(27, 122, 139, 0.2);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+
+    .article-date {
+      color: var(--text-muted);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .article-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-blue);
+      line-height: 1.4;
+      margin-bottom: 12px;
+      transition: color 0.2s ease;
+    }
+
+    .article-card:hover .article-title {
+      color: var(--primary-teal);
+    }
+
+    .article-excerpt {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-body);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary-teal);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .article-link svg {
+      transition: transform 0.2s ease;
+    }
+
+    .article-card:hover .article-link {
+      color: var(--accent-pink);
+    }
+
+    .article-card:hover .article-link svg {
+      transform: translateX(4px);
+    }
+
+    /* Pagination Strip */
+    .pagination-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .page-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: var(--navy-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .page-btn:hover {
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(27, 122, 139, 0.15);
+    }
+
+    .page-btn.active {
+      background: var(--navy-blue);
+      color: #ffffff;
+      border-color: var(--navy-blue);
+      box-shadow: 0 4px 14px rgba(20, 47, 75, 0.25);
+    }
+
+    .page-ellipsis {
+      padding: 0 6px;
+      color: #94a3b8;
+      font-weight: 700;
+    }
+
+    /* Right Column: Sidebar Widgets */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: sticky;
+      top: 190px;
+    }
+
+    /* Widget 1: Other Featured Posts */
+    .sidebar-widget-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: 0 4px 16px rgba(20, 47, 75, 0.04);
+    }
+
+    .widget-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy-blue);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
+      position: relative;
+    }
+
+    .widget-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 40px;
+      height: 2px;
+      background: var(--accent-pink);
+    }
+
+    .featured-posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .featured-post-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: transform 0.2s ease;
+    }
+
+    .featured-post-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .featured-post-item:hover {
+      transform: translateX(4px);
+    }
+
+    .featured-thumb {
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #e2e8f0;
+    }
+
+    .featured-post-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .featured-post-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy-blue);
+      line-height: 1.35;
+      margin-bottom: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .featured-post-item:hover .featured-post-title {
+      color: var(--primary-teal);
+    }
+
+    .featured-post-time {
+      font-size: 0.76rem;
+      color: #64748b;
+    }
+
+    .widget-footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary-teal);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .widget-footer-link:hover {
+      color: var(--accent-pink);
+      gap: 10px;
+    }
+
+    /* Widget 2: Contact Us Card (Deep Navy) */
+    .sidebar-contact-card {
+      background: linear-gradient(145deg, #142f4b 0%, #0b1a2b 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      box-shadow: 0 16px 36px rgba(11, 26, 43, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sidebar-contact-card::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 201, 167, 0.25) 0%, rgba(0, 201, 167, 0) 70%);
+      pointer-events: none;
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 201, 167, 0.15);
+      border: 1px solid rgba(0, 201, 167, 0.35);
+      color: var(--soft-cyan);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .contact-card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .contact-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 20px;
+    }
+
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 0.86rem;
+    }
+
+    .contact-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-info-row:hover {
+      color: var(--soft-cyan);
+    }
+
+    .contact-info-row svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--soft-cyan);
+    }
+
+    .btn-sidebar-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent-pink);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(255, 59, 124, 0.35);
+    }
+
+    .btn-sidebar-contact:hover {
+      background: #e62867;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 59, 124, 0.5);
+    }
+
+    /* 4. Pre-Footer Admissions Callout Ribbon */
+    .blog-admissions-ribbon {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #0b1a2b 0%, #142f4b 60%, #1a3c61 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    .blog-admissions-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .blog-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .blog-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero-section {
+        padding: 125px 0 55px;
+      }
+
+      .blog-hero-title {
+        font-size: 2.1rem;
+      }
+
+      .blog-hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-admissions-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= Dual-State Sticky Header ================= -->
+  <div class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- 1. Top Utility Bar -->
+    <aside class="top-utility-bar" id="topUtilityBar" aria-label="Quick contact and utility links">
+      <div class="top-bar-container">
+        <div class="top-bar-left">
+          <span class="top-bar-query">Have any questions?</span>
+          <a href="tel:+919876543210" class="top-bar-contact-item" title="Call CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+            </svg>
+            <span class="top-bar-text">+91 98765 43210</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">&bull;</span>
+          <a href="mailto:admissions@ceartembryology.com" class="top-bar-contact-item" title="Email CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span class="top-bar-text">admissions@ceartembryology.com</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">/</span>
+          <a href="mailto:info@ceartembryology.com" class="top-bar-contact-item" title="General Information">
+            <span class="top-bar-text">info@ceartembryology.com</span>
+          </a>
+        </div>
+
+        <div class="top-bar-right">
+          <div class="top-bar-doc-item" onclick="downloadBrochure(event)" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Brochure Download</span>
+          </div>
+          <span class="top-bar-sep" aria-hidden="true">|</span>
+          <div class="top-bar-doc-item" onclick="window.location.href='programs.html#lead-form'" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Registration Form</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. Main Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+      <div class="main-nav-container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <a href="index.html" class="brand-logo" aria-label="CEART Logo">
+            <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';">
+            <div id="brandLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 10px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title">CE<span>A</span>RT</span>
+                <span class="brand-sub">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-menu-item"><a href="index.html" class="nav-item">Home</a></li>
+            <li class="nav-menu-item"><a href="about.html" class="nav-item">About</a></li>
+            <li class="nav-menu-item nav-item-dropdown" id="coursesDropdown">
+              <button type="button" class="nav-item nav-dropdown-trigger" id="coursesDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-controls="coursesDropdownMenu">
+                Courses
+                <svg class="nav-chevron" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" id="coursesDropdownMenu" role="region" aria-label="Short Term Courses">
+                <div class="dropdown-heading"><a href="programs.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">Short Term Courses <span>View All &rarr;</span></a></div>
+                <a href="course-andrology-embryology.html" class="dropdown-item">Advanced Course of Andrology and Embryology</a>
+                <a href="course-icsi-micromanipulation.html" class="dropdown-item">Micromanipulation and ICSI Hands-on Training</a>
+                <a href="course-clinical-embryology.html" class="dropdown-item">Certificate Course in Clinical Embryology</a>
+                <a href="course-cryopreservation-vitrification.html" class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</a>
+                <a href="course-basic-advanced-andrology.html" class="dropdown-item">Basic to Advanced Andrology Certificate Course</a>
+                <a href="programs.html" class="dropdown-item" style="border-top: 1px solid var(--border-light); margin-top: 6px; padding-top: 10px; color: var(--accent-pink); font-weight: 700;">Explore All 21 Programs &rarr;</a>
+              </div>
+            </li>
+            <li class="nav-menu-item"><a href="gallery.html" class="nav-item">Gallery</a></li>
+            <li class="nav-menu-item"><a href="training-centre.html" class="nav-item">Training Centre</a></li>
+            <li class="nav-menu-item"><a href="faculty.html" class="nav-item">Faculty</a></li>
+            <li class="nav-menu-item"><a href="updates.html" class="nav-item">Updates</a></li>
+            <li class="nav-menu-item"><a href="blogs.html" class="nav-item active">Blogs</a></li>
+            <li class="nav-menu-item"><a href="index.html#contact-seo" class="nav-item">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="btn-navy-enroll" id="headerEnrollBtn" onclick="window.location.href='programs.html#lead-form'">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- ================= 1. Page Header Section ================= -->
+    <section class="blog-hero-section">
+      <div class="blog-hero-glow"></div>
+      <div class="container blog-hero-content">
+        <!-- Breadcrumb -->
+        <div class="blog-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="blog-breadcrumb-sep">&gt;</span>
+          <span class="blog-breadcrumb-active">Blogs</span>
+        </div>
+
+        <h1 class="blog-hero-title">
+          Our <span class="gradient-text">Embryology Blogs</span>
+        </h1>
+        <p class="blog-hero-subtitle">
+          Insights, guides, and updates on embryology, ART, and reproductive science for students, professionals, and curious minds.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 2. Search & Category Bar ================= -->
+    <section class="blog-filter-section">
+      <div class="container">
+        <div class="filter-bar-inner">
+          <!-- Search Box -->
+          <div class="search-box-wrap">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="blogSearchInput" class="search-input" placeholder="Search articles, topics or keywords..." aria-label="Search articles">
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="category-pills-wrap" id="categoryPills">
+            <button type="button" class="category-pill active" data-category="all">All Posts</button>
+            <button type="button" class="category-pill" data-category="embryology">Embryology</button>
+            <button type="button" class="category-pill" data-category="ivf-lab">IVF Laboratory</button>
+            <button type="button" class="category-pill" data-category="career">Embryology Career</button>
+            <button type="button" class="category-pill" data-category="challenges">Embryology Challenges</button>
+            <button type="button" class="category-pill" data-category="more">
+              More Categories
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 5l3 3 3-3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. Main Two-Column Layout ================= -->
+    <section class="blog-main-section">
+      <div class="container">
+        <div class="blog-layout-grid">
+
+          <!-- Left Column: 9-Card Grid & Pagination -->
+          <div class="blog-content-col">
+            <div class="articles-grid" id="articlesGrid">
+
+              <!-- Card 1 -->
+              <article class="article-card" data-category="embryology" data-reveal="slide-up">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80"
+                    alt="Choosing Embryology Institute in India" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Embryology Training</span>
+                    <span class="article-date">12 Oct 2026</span>
+                  </div>
+                  <h3 class="article-title">How to Choose the Best Embryology Training Institute in India</h3>
+                  <p class="article-excerpt">
+                    Selecting the right training academy defines your hands-on dexterity and clinical competence. Discover the 7 critical benchmarks to evaluate before enrolling.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="article-card" data-category="ivf-lab" data-reveal="slide-up" style="transition-delay: 0.05s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80"
+                    alt="Glossary of ART Terms" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Glossary Of ART Terms</span>
+                    <span class="article-date">2 Oct 2026</span>
+                  </div>
+                  <h3 class="article-title">Glossary of ART Terms: A Simple A–Z Guide for Fertility Professionals</h3>
+                  <p class="article-excerpt">
+                    From Aneuploidy and Blastocyst grading to Vitrification and Zona Pellucida hatching, understand the essential clinical terminology of assisted reproductive science.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="article-card" data-category="embryology" data-reveal="slide-up" style="transition-delay: 0.1s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+                    alt="Top Institutes in India for Clinical Embryology" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Institutes In India</span>
+                    <span class="article-date">25 Sept 2026</span>
+                  </div>
+                  <h3 class="article-title">Top Institutes in India for Hands-On Clinical Embryology Training</h3>
+                  <p class="article-excerpt">
+                    Discover how real clinical lab exposure, cleanroom infrastructure, and dedicated micromanipulator stations separate premier embryology schools from theory-only courses.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="article-card" data-category="career" data-reveal="slide-up" style="transition-delay: 0.15s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80"
+                    alt="IVF Specialist vs Embryologist" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">IVF Specialist vs Embryologist</span>
+                    <span class="article-date">18 Sept 2026</span>
+                  </div>
+                  <h3 class="article-title">Can an IVF Specialist Also Be an Embryologist? Clearing Up the Confusion</h3>
+                  <p class="article-excerpt">
+                    Understanding the distinctions, overlaps, and dual certification pathways between clinical reproductive gynecologists and laboratory embryologists in modern IVF.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="article-card" data-category="embryology" data-reveal="slide-up" style="transition-delay: 0.2s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80"
+                    alt="Hands-On Training vs Theory in Embryology" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Hands-On Training vs Theory</span>
+                    <span class="article-date">11 Sept 2026</span>
+                  </div>
+                  <h3 class="article-title">Hands-On Training vs Theory in Embryology: How Much Exposure Do You Need?</h3>
+                  <p class="article-excerpt">
+                    Why simulator workstations and patient case auditing under senior faculty build the instinctive tactile precision required for successful micromanipulation.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="article-card" data-category="challenges" data-reveal="slide-up" style="transition-delay: 0.25s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80"
+                    alt="Basic Terms and Laboratory Protocols" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Embryology Challenges</span>
+                    <span class="article-date">4 Sept 2026</span>
+                  </div>
+                  <h3 class="article-title">Basic Terms and Laboratory Protocols You Must Know Before Training Starts</h3>
+                  <p class="article-excerpt">
+                    Get ahead in your fellowship by mastering laminar airflow QA/QC, culture media buffering, incubator calibration, and sterile gamete handling benchmarks.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 7 -->
+              <article class="article-card" data-category="ivf-lab" data-reveal="slide-up" style="transition-delay: 0.3s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80"
+                    alt="Procedures Performed by Embryologist" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Clinical Procedures</span>
+                    <span class="article-date">28 Aug 2026</span>
+                  </div>
+                  <h3 class="article-title">What Procedures Does an Embryologist Perform? A Complete Workflow Guide</h3>
+                  <p class="article-excerpt">
+                    A chronological walk through an embryologist's daily duties: ovum pick-up denudation, ICSI injection, embryo grading, and rapid blastocyst vitrification.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 8 -->
+              <article class="article-card" data-category="career" data-reveal="slide-up" style="transition-delay: 0.35s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
+                    alt="Embryologist Salary Expectations" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Salary &amp; Career Growth</span>
+                    <span class="article-date">21 Aug 2026</span>
+                  </div>
+                  <h3 class="article-title">Salary of an Embryologist: What to Expect From Entry-Level to Senior Consultant</h3>
+                  <p class="article-excerpt">
+                    An honest breakdown of industry remuneration packages, freelancing opportunities, lab directorship salaries, and career trajectories in India and abroad.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 9 -->
+              <article class="article-card" data-category="career" data-reveal="slide-up" style="transition-delay: 0.4s;">
+                <div class="article-thumb-wrap">
+                  <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80"
+                    alt="Roles and Departments for Certified Embryologists" class="article-thumb" loading="lazy">
+                </div>
+                <div class="article-body">
+                  <div class="article-meta">
+                    <span class="article-tag">Career Pathways</span>
+                    <span class="article-date">14 Aug 2026</span>
+                  </div>
+                  <h3 class="article-title">Roles &amp; Medical Departments Where a Certified Embryologist Can Practice</h3>
+                  <p class="article-excerpt">
+                    Explore career avenues across corporate IVF chains, hospital fertility units, diagnostic andrology labs, cryobanks, and academic reproductive research facilities.
+                  </p>
+                  <a href="programs.html" class="article-link">
+                    <span>Read More</span>
+                    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Pagination Strip -->
+            <div class="pagination-wrap">
+              <a href="#prev" class="page-btn" aria-label="Previous page">&lt;</a>
+              <a href="#page-1" class="page-btn active">1</a>
+              <a href="#page-2" class="page-btn">2</a>
+              <a href="#page-3" class="page-btn">3</a>
+              <a href="#page-4" class="page-btn">4</a>
+              <span class="page-ellipsis">...</span>
+              <a href="#page-8" class="page-btn">8</a>
+              <a href="#next" class="page-btn" aria-label="Next page">&gt;</a>
+            </div>
+          </div>
+
+          <!-- Right Sidebar: Widgets -->
+          <aside class="blog-sidebar">
+
+            <!-- Widget 1: Other Featured Posts -->
+            <div class="sidebar-widget-card" data-reveal="slide-up">
+              <h3 class="widget-title">Other Featured Posts</h3>
+              <div class="featured-posts-list">
+
+                <!-- Item 1 -->
+                <a href="programs.html" class="featured-post-item">
+                  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=200&q=80"
+                    alt="Global Certification" class="featured-thumb" loading="lazy">
+                  <div class="featured-post-content">
+                    <h4 class="featured-post-title">Global Certification Options for Embryologists</h4>
+                    <span class="featured-post-time">3 months ago</span>
+                  </div>
+                </a>
+
+                <!-- Item 2 -->
+                <a href="programs.html" class="featured-post-item">
+                  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=200&q=80"
+                    alt="Top 10 IVF Centres in North India" class="featured-thumb" loading="lazy">
+                  <div class="featured-post-content">
+                    <h4 class="featured-post-title">Top 10 IVF Centres in North India for Lab Exposure</h4>
+                    <span class="featured-post-time">5 months ago</span>
+                  </div>
+                </a>
+
+                <!-- Item 3 -->
+                <a href="programs.html" class="featured-post-item">
+                  <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=200&q=80"
+                    alt="Natural vs In Vitro Embryos" class="featured-thumb" loading="lazy">
+                  <div class="featured-post-content">
+                    <h4 class="featured-post-title">Difference Between Natural Conception &amp; In Vitro Embryos</h4>
+                    <span class="featured-post-time">6 months ago</span>
+                  </div>
+                </a>
+
+                <!-- Item 4 -->
+                <a href="programs.html" class="featured-post-item">
+                  <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=200&q=80"
+                    alt="Sperm Preparation and Fertilisation" class="featured-thumb" loading="lazy">
+                  <div class="featured-post-content">
+                    <h4 class="featured-post-title">How Sperm Preparation Affects Oocyte Fertilisation Rates</h4>
+                    <span class="featured-post-time">5 months ago</span>
+                  </div>
+                </a>
+
+              </div>
+
+              <a href="programs.html" class="widget-footer-link">
+                <span>View All Posts</span>
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Widget 2: Contact Us Card (Deep Navy) -->
+            <div class="sidebar-contact-card" data-reveal="slide-up">
+              <span class="contact-badge">AVAILABLE 24/7</span>
+              <h3 class="contact-card-title">Contact Us</h3>
+              <p class="contact-card-desc">
+                Have questions about embryology courses? Our academic counselors are here to help you.
+              </p>
+
+              <div class="contact-info-list">
+                <a href="tel:+919870109545" class="contact-info-row">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+                  </svg>
+                  <span>+91 98701 09545 / +91 98765 43210</span>
+                </a>
+                <a href="mailto:admissions@ceartjaipur.com" class="contact-info-row">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <span>admissions@ceartjaipur.com</span>
+                </a>
+                <div class="contact-info-row">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>CEART Campus, Near Kulki IVF Centre, Jaipur, Rajasthan</span>
+                </div>
+              </div>
+
+              <a href="index.html#contact-seo" class="btn-sidebar-contact">
+                <span>Contact Us</span>
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. Pre-Footer Admissions Callout Ribbon ================= -->
+    <section class="blog-admissions-ribbon">
+      <div class="container">
+        <div class="blog-admissions-box">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 201, 167, 0.18); border: 1px solid rgba(0, 201, 167, 0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--soft-cyan);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.55rem; margin-bottom: 6px; font-weight: 700;">Have questions? Talk to our admissions team</h3>
+              <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin: 0; max-width: 620px;">
+                Consult with our senior embryology mentors to confirm your upcoming batch dates and workshop schedules.
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0;">
+            <a href="programs.html#lead-form" class="btn btn-secondary">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #fff;">
+              <span>Call +91 98765 43210</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal="slide-up">
+          <a href="index.html" class="footer-brand-link">
+            <div class="footer-logo-wrap"
+              style="background-color: #ffffff; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+              <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+                class="footer-logo-img"
+                style="height: 32px; max-height: 32px; max-width: 120px; width: auto; object-fit: contain; display: block;"
+                onerror="this.parentElement.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';">
+            </div>
+            <div id="footerLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 12px; margin-bottom: 22px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title" style="color: #fff;">CE<span style="color: var(--accent-pink);">A</span>RT</span>
+                <span class="brand-sub" style="color: var(--soft-cyan);">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+          <p>
+            Centre for Embryology &amp; Assisted Reproductive Technology. Dedicated to advancing clinical excellence and
+            empowering medical specialists with hands-on reproductive laboratory expertise.
+          </p>
+          <div class="footer-socials">
+            <a href="#facebook" class="footer-social-btn" aria-label="Facebook">fb</a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="LinkedIn">in</a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Twitter">x</a>
+            <a href="#instagram" class="footer-social-btn" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-1">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About CEART</a></li>
+            <li><a href="programs.html">Academic Courses</a></li>
+            <li><a href="training-centre.html">Lab Infrastructure</a></li>
+            <li><a href="faculty.html">Faculty Team</a></li>
+            <li><a href="index.html#placements">Student Placements</a></li>
+            <li><a href="gallery.html">Campus Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-2">
+          <h4>Policy &amp; Help</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#admission-process">Admission Guidelines</a></li>
+            <li><a href="index.html#faqs">Frequently Asked Questions</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="index.html#hostel">Hostel &amp; Stay Guidance</a></li>
+            <li><a href="index.html#contact-seo">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-3">
+          <h4>Flagship Courses</h4>
+          <ul class="footer-links">
+            <li><a href="course-andrology-embryology.html">Andrology &amp; Embryology (6M)</a></li>
+            <li><a href="course-icsi-micromanipulation.html">ICSI &amp; Micromanipulation (2W)</a></li>
+            <li><a href="course-clinical-embryology.html">Clinical Embryology (1M/1Y)</a></li>
+            <li><a href="course-cryopreservation-vitrification.html">Vitrification &amp; Cryo (2W)</a></li>
+            <li><a href="course-basic-advanced-andrology.html">Basic to Advanced Andrology</a></li>
+            <li><a href="programs.html">Explore All 21 Programs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 CEART Institute. All Rights Reserved. Reg. under ART &amp; Medical Education Guidelines.
+        </div>
+        <div>
+          Designed for Clinical Precision &bull; <a href="#">Back to top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Native Real-Time Search & Category Filter Script ================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var searchInput = document.getElementById('blogSearchInput');
+      var categoryButtons = document.querySelectorAll('.category-pill');
+      var articles = document.querySelectorAll('.article-card');
+      var currentCategory = 'all';
+
+      function filterArticles() {
+        var query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        articles.forEach(function (article) {
+          var category = article.getAttribute('data-category');
+          var title = article.querySelector('.article-title') ? article.querySelector('.article-title').textContent.toLowerCase() : '';
+          var excerpt = article.querySelector('.article-excerpt') ? article.querySelector('.article-excerpt').textContent.toLowerCase() : '';
+          var tag = article.querySelector('.article-tag') ? article.querySelector('.article-tag').textContent.toLowerCase() : '';
+
+          var matchesCategory = (currentCategory === 'all' || currentCategory === 'more' || category === currentCategory);
+          var matchesSearch = (!query || title.includes(query) || excerpt.includes(query) || tag.includes(query));
+
+          if (matchesCategory && matchesSearch) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+      }
+
+      categoryButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          categoryButtons.forEach(function (b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          currentCategory = this.getAttribute('data-category');
+          filterArticles();
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
