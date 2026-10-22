@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus &amp; Lab Gallery | CEART Jaipur</title>
+  <meta name="description"
+    content="Explore the vibrant gallery of CEART Jaipur. View our Grade-A cleanrooms, micromanipulation workstations, classroom sessions, Fertivision conferences, and convocation ceremonies.">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="canonical" href="https://ceartembryology.com/gallery.html">
+  <meta property="og:site_name" content="CEART Embryology">
+  <meta property="og:url" content="https://ceartembryology.com/gallery.html">
+  <meta property="og:title" content="Campus &amp; Lab Gallery | CEART Jaipur">
+  <meta property="og:description"
+    content="Moments of excellence at CEART Jaipur: cleanrooms, inverted ICSI workstations, hands-on workshops, and student convocations.">
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="global.css">
+
+  <!-- Interactive Motion Engine -->
+  <script src="main.js" defer></script>
+
+  <!-- ================= Isolated Scoped Styles for Gallery Page ================= -->
+  <style>
+    body, html {
+      overflow-x: hidden;
+    }
+
+    /* 1. Page Hero Banner */
+    .gallery-hero-section {
+      position: relative;
+      padding: 165px 0 65px;
+      background: linear-gradient(135deg, var(--navy-blue-deep) 0%, var(--navy-blue) 100%);
+      color: var(--white);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .gallery-hero-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 4;
+    }
+
+    .gallery-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .gallery-breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .gallery-breadcrumb a:hover {
+      color: var(--soft-cyan);
+    }
+
+    .gallery-badge {
+      display: inline-block;
+      background: rgba(255, 59, 124, 0.18);
+      color: var(--accent-pink);
+      border: 1px solid rgba(255, 59, 124, 0.35);
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .gallery-hero-title {
+      font-size: 2.85rem;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .gallery-hero-desc {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 auto;
+      max-width: 720px;
+    }
+
+    /* 2. Category Filter Bar */
+    .gallery-main-section {
+      padding: 60px 0 90px;
+      background: var(--bg-light);
+    }
+
+    .filter-bar-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    .filter-btn {
+      background: var(--white);
+      color: var(--navy-blue);
+      border: 1px solid var(--border-light);
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .filter-btn:hover {
+      background: var(--navy-blue-ultra-light);
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--navy-blue) 0%, var(--primary-teal) 100%);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(27, 122, 139, 0.35);
+    }
+
+    /* 3. Responsive Photo Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, opacity 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(14, 30, 48, 0.14);
+      border-color: rgba(27, 122, 139, 0.3);
+    }
+
+    .gallery-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/11;
+      overflow: hidden;
+      background: #0e1e30;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-tag-pill {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(14, 30, 48, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--soft-cyan);
+      border: 1px solid rgba(0, 201, 167, 0.4);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .gallery-zoom-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.7);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 59, 124, 0.9);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 3;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-card:hover .gallery-zoom-icon {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .gallery-info {
+      padding: 20px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .gallery-title {
+      font-size: 1.15rem;
+      color: var(--navy-blue);
+      margin-bottom: 8px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .gallery-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* 4. Pre-Footer Callout Ribbon */
+    .gallery-ribbon {
+      background: linear-gradient(135deg, var(--navy-blue-deep) 0%, var(--navy-blue) 100%);
+      border-radius: var(--radius-xl);
+      padding: 44px 50px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-ribbon-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .gallery-ribbon-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(27, 122, 139, 0.25) 0%, rgba(255, 59, 124, 0.25) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--soft-cyan);
+      flex-shrink: 0;
+    }
+
+    /* 5. Custom Lightbox Modal */
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 22, 35, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-card {
+      background: #142f4b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-xl);
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+      animation: modalSlideUp 0.35s ease;
+    }
+
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px) scale(0.96); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border: none;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+      z-index: 10;
+    }
+
+    .lightbox-close-btn:hover {
+      background: var(--accent-pink);
+      transform: scale(1.1);
+    }
+
+    .lightbox-img-wrap {
+      width: 100%;
+      max-height: 520px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lightbox-img-wrap img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+    }
+
+    .lightbox-body {
+      padding: 24px 30px;
+      color: #ffffff;
+    }
+
+    .lightbox-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary-teal);
+      background: rgba(0, 201, 167, 0.15);
+      border: 1px solid rgba(0, 201, 167, 0.3);
+      padding: 3px 12px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .lightbox-title {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .lightbox-desc {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 991px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .gallery-ribbon {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 28px;
+      }
+      .gallery-ribbon-left {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-hero-section {
+        padding: 135px 0 45px;
+      }
+      .gallery-hero-title {
+        font-size: 2.1rem;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .filter-bar-wrap {
+        gap: 8px;
+      }
+      .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+      }
+      .lightbox-body {
+        padding: 18px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= Dual-State Sticky Header ================= -->
+  <div class="site-header-wrapper" id="siteHeaderWrapper">
+    <!-- 1. Top Utility Bar -->
+    <aside class="top-utility-bar" id="topUtilityBar" aria-label="Quick contact and utility links">
+      <div class="top-bar-container">
+        <div class="top-bar-left">
+          <span class="top-bar-query">Have any questions?</span>
+          <a href="tel:+919876543210" class="top-bar-contact-item" title="Call CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+            </svg>
+            <span class="top-bar-text">+91 98765 43210</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">&bull;</span>
+          <a href="mailto:admissions@ceartembryology.com" class="top-bar-contact-item" title="Email CEART Admissions">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span class="top-bar-text">admissions@ceartembryology.com</span>
+          </a>
+          <span class="top-bar-sep" aria-hidden="true">/</span>
+          <a href="mailto:info@ceartembryology.com" class="top-bar-contact-item" title="General Information">
+            <span class="top-bar-text">info@ceartembryology.com</span>
+          </a>
+        </div>
+
+        <div class="top-bar-right">
+          <div class="top-bar-doc-item" onclick="downloadBrochure(event)" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Brochure Download</span>
+          </div>
+          <span class="top-bar-sep" aria-hidden="true">|</span>
+          <div class="top-bar-doc-item" onclick="window.location.href='programs.html#lead-form'" role="button" tabindex="0">
+            <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8zm0-3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
+            </svg>
+            <span class="top-bar-action">Registration Form</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. Main Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+      <div class="main-nav-container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <a href="index.html" class="brand-logo" aria-label="CEART Logo">
+            <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';">
+            <div id="brandLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 10px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title">CE<span>A</span>RT</span>
+                <span class="brand-sub">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-menu-item"><a href="index.html" class="nav-item">Home</a></li>
+            <li class="nav-menu-item"><a href="about.html" class="nav-item">About</a></li>
+            <li class="nav-menu-item nav-item-dropdown" id="coursesDropdown">
+              <button type="button" class="nav-item nav-dropdown-trigger" id="coursesDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-controls="coursesDropdownMenu">
+                Courses
+                <svg class="nav-chevron" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" id="coursesDropdownMenu" role="region" aria-label="Short Term Courses">
+                <div class="dropdown-heading"><a href="programs.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">Short Term Courses <span>View All &rarr;</span></a></div>
+                <a href="course-andrology-embryology.html" class="dropdown-item">Advanced Course of Andrology and Embryology</a>
+                <a href="course-icsi-micromanipulation.html" class="dropdown-item">Micromanipulation and ICSI Hands-on Training</a>
+                <a href="course-clinical-embryology.html" class="dropdown-item">Certificate Course in Clinical Embryology</a>
+                <a href="course-cryopreservation-vitrification.html" class="dropdown-item">Cryopreservation/Vitrification and Embryology Lab</a>
+                <a href="course-basic-advanced-andrology.html" class="dropdown-item">Basic to Advanced Andrology Certificate Course</a>
+                <a href="programs.html" class="dropdown-item" style="border-top: 1px solid var(--border-light); margin-top: 6px; padding-top: 10px; color: var(--accent-pink); font-weight: 700;">Explore All 21 Programs &rarr;</a>
+              </div>
+            </li>
+            <li class="nav-menu-item"><a href="gallery.html" class="nav-item active">Gallery</a></li>
+            <li class="nav-menu-item"><a href="index.html#facilities" class="nav-item">Training Centre</a></li>
+            <li class="nav-menu-item"><a href="faculty.html" class="nav-item">Faculty</a></li>
+            <li class="nav-menu-item"><a href="index.html#highlights" class="nav-item">Updates</a></li>
+            <li class="nav-menu-item"><a href="index.html#blogs" class="nav-item">Blogs</a></li>
+            <li class="nav-menu-item"><a href="index.html#contact-seo" class="nav-item">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="btn-navy-enroll" id="headerEnrollBtn" onclick="window.location.href='programs.html#lead-form'">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- ================= 1. Page Hero Banner ================= -->
+    <section class="gallery-hero-section">
+      <div class="hero-parallax-bg"></div>
+      <div class="hero-glow-blob hero-glow-1"></div>
+      <div class="hero-glow-blob hero-glow-2"></div>
+
+      <div class="container">
+        <div class="gallery-hero-wrap" data-reveal="fade-in">
+          <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span style="opacity: 0.5;">&gt;</span>
+            <span style="color: var(--soft-cyan); font-weight: 600;">Gallery</span>
+          </nav>
+
+          <div>
+            <span class="gallery-badge">OUR GALLERY</span>
+          </div>
+
+          <h1 class="gallery-hero-title">
+            Capturing <span class="gradient-text">Moments</span> of Excellence
+          </h1>
+
+          <p class="gallery-hero-desc">
+            Explore our state-of-the-art facilities, specialized training workshops, and the vibrant academic life at CEART Jaipur through our curated gallery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. Category Filter & Photo Grid ================= -->
+    <section class="gallery-main-section">
+      <div class="container">
+        <!-- Category Filter Bar -->
+        <div class="filter-bar-wrap" role="tablist" aria-label="Gallery category filters" data-reveal="fade-in">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="filter-btn" data-filter="workshops" role="tab" aria-selected="false">Workshops &amp; Hands-on</button>
+          <button type="button" class="filter-btn" data-filter="cleanroom" role="tab" aria-selected="false">Cleanroom &amp; IVF Lab</button>
+          <button type="button" class="filter-btn" data-filter="classroom" role="tab" aria-selected="false">Classroom Sessions</button>
+          <button type="button" class="filter-btn" data-filter="conferences" role="tab" aria-selected="false">Conferences &amp; Fertivision</button>
+          <button type="button" class="filter-btn" data-filter="events" role="tab" aria-selected="false">Events &amp; Convocation</button>
+        </div>
+
+        <!-- 3-Column Responsive Photo Grid (12 Curated Cards) -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Card 1: Hands-on ICSI -->
+          <article class="gallery-card" data-category="workshops" data-reveal="slide-up">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Workshops</span>
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                alt="Hands-on ICSI micromanipulation at bench workstations" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Hands-on ICSI Micromanipulation</h3>
+              <p class="gallery-desc">Trainees practicing single-sperm immobilization, PVP droplet handling, and oocyte injection on individual Narishige workstations.</p>
+            </div>
+          </article>
+
+          <!-- Card 2: Classroom Theory -->
+          <article class="gallery-card" data-category="classroom" data-reveal="slide-up" class="delay-1">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Classroom</span>
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                alt="Interactive classroom theory and reproductive biology lectures" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Reproductive Biology &amp; Physiology</h3>
+              <p class="gallery-desc">Interactive theory lectures covering folliculogenesis, stimulation pharmacology, and clinical ART regulatory frameworks.</p>
+            </div>
+          </article>
+
+          <!-- Card 3: Inverted Optics -->
+          <article class="gallery-card" data-category="cleanroom" data-reveal="slide-up" class="delay-2">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Cleanroom</span>
+              <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80"
+                alt="Inverted microscope alignment and gamete handling" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Inverted Optics &amp; Gamete Handling</h3>
+              <p class="gallery-desc">Hoffman modulation contrast microscopy training for 3D visualization of oolemma funneling and spindle alignment.</p>
+            </div>
+          </article>
+
+          <!-- Card 4: Cleanroom Laminar Hood -->
+          <article class="gallery-card" data-category="cleanroom" data-reveal="slide-up">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Cleanroom</span>
+              <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=800&q=80"
+                alt="Cleanroom laminar hood setup and QA/QC inspection" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Grade-A Laminar Hood QA/QC</h3>
+              <p class="gallery-desc">Sterile cleanroom airflow protocols, particle counting audits, VOC filtration, and routine incubator temperature logging.</p>
+            </div>
+          </article>
+
+          <!-- Card 5: Oocyte Denudation -->
+          <article class="gallery-card" data-category="workshops" data-reveal="slide-up" class="delay-1">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Workshops</span>
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                alt="Oocyte denudation demonstration by senior faculty" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Oocyte Denudation &amp; Stripping</h3>
+              <p class="gallery-desc">Senior embryologists guiding candidates through enzymatic hyaluronidase exposure and micro-stripper pipette sizing.</p>
+            </div>
+          </article>
+
+          <!-- Card 6: Cohort Orientation -->
+          <article class="gallery-card" data-category="classroom" data-reveal="slide-up" class="delay-2">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Classroom</span>
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+                alt="Student batch orientation and cohort mentoring" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Cohort Orientation &amp; Mentoring</h3>
+              <p class="gallery-desc">Direct one-on-one mentorship sessions where trainees review daily bench objectives, KPIs, and procedural logbooks.</p>
+            </div>
+          </article>
+
+          <!-- Card 7: Vitrification Bench -->
+          <article class="gallery-card" data-category="workshops" data-reveal="slide-up">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Workshops</span>
+              <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80"
+                alt="Vitrification and liquid nitrogen bench practice" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Vitrification &amp; Cryo Bench</h3>
+              <p class="gallery-desc">Mastering ultra-rapid carrier loading on Cryotop and CryoLock devices with sub-zero liquid nitrogen bath plunging.</p>
+            </div>
+          </article>
+
+          <!-- Card 8: Andrology Semenology -->
+          <article class="gallery-card" data-category="cleanroom" data-reveal="slide-up" class="delay-1">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Cleanroom</span>
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80"
+                alt="Andrology sperm preparation and morphology assessment" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Andrology &amp; Sperm Prep Lab</h3>
+              <p class="gallery-desc">WHO 6th edition diagnostic semen evaluation, Makler chamber counting, Kruger morphology staining, and DGC separations.</p>
+            </div>
+          </article>
+
+          <!-- Card 9: Convocation -->
+          <article class="gallery-card" data-category="events" data-reveal="slide-up" class="delay-2">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Events</span>
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+                alt="Certificate distribution ceremony and convocation" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Convocation &amp; Certification</h3>
+              <p class="gallery-desc">Graduation ceremony celebrating candidates successfully certified in Clinical Embryology, ICSI, and ART Laboratory Sciences.</p>
+            </div>
+          </article>
+
+          <!-- Card 10: Fertivision Conference -->
+          <article class="gallery-card" data-category="conferences" data-reveal="slide-up">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Conferences</span>
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+                alt="Fertivision National Conference Delegation" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Fertivision Conference Delegation</h3>
+              <p class="gallery-desc">CEART faculty and fellows presenting cutting-edge embryology abstracts and engaging with international ART leaders.</p>
+            </div>
+          </article>
+
+          <!-- Card 11: Kulki IVF Clinical Shadowing -->
+          <article class="gallery-card" data-category="cleanroom" data-reveal="slide-up" class="delay-1">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Cleanroom</span>
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+                alt="Kulki IVF Clinical Shadowing Rotations" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Kulki IVF Clinical Shadowing</h3>
+              <p class="gallery-desc">Direct observation of real patient OPU collections, embryo transfer catheter loading, and electronic chain-of-custody logs.</p>
+            </div>
+          </article>
+
+          <!-- Card 12: Laser Biopsy Workshop -->
+          <article class="gallery-card" data-category="workshops" data-reveal="slide-up" class="delay-2">
+            <div class="gallery-img-container">
+              <span class="gallery-tag-pill">Workshops</span>
+              <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80"
+                alt="Laser Biopsy & Diode Alignment Workshop" class="gallery-img" loading="lazy">
+              <div class="gallery-zoom-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">Diode Laser Biopsy Workshop</h3>
+              <p class="gallery-desc">Practical training on laser-assisted hatching, trophectoderm biopsy cell collection, and cell tubing for PGT analysis.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4. Pre-Footer Callout Ribbon -->
+        <div class="gallery-ribbon" data-reveal="slide-up">
+          <div class="gallery-ribbon-left">
+            <div class="gallery-ribbon-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.55rem; margin-bottom: 6px; font-weight: 700;">Have questions? Talk to our academic admissions team</h3>
+              <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin: 0; max-width: 620px;">
+                Consult with our senior embryology mentors to confirm your upcoming batch dates and workshop schedules.
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0;">
+            <a href="programs.html#lead-form" class="btn btn-secondary">
+              <span>Enroll Now</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #fff;">
+              <span>Call +91 98765 43210</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 5. Interactive Lightbox Modal ================= -->
+  <div class="lightbox-backdrop" id="galleryLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-card" id="lightboxCard">
+      <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Close photo preview">&times;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Gallery Preview">
+      </div>
+      <div class="lightbox-body">
+        <span class="lightbox-tag" id="lightboxTag">CATEGORY</span>
+        <h3 class="lightbox-title" id="lightboxTitle">Photo Title</h3>
+        <p class="lightbox-desc" id="lightboxDesc">Detailed clinical and educational description.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Footer ================= -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal="slide-up">
+          <a href="index.html" class="footer-brand-link">
+            <div class="footer-logo-wrap"
+              style="background-color: #ffffff; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+              <img src="ceartlogo.png" alt="CEART - Centre for Embryology &amp; Assisted Reproductive Technology"
+                class="footer-logo-img"
+                style="height: 32px; max-height: 32px; max-width: 120px; width: auto; object-fit: contain; display: block;"
+                onerror="this.parentElement.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';">
+            </div>
+            <div id="footerLogoFallback" class="brand-logo-fallback"
+              style="display: none; align-items: center; gap: 12px; margin-bottom: 22px;">
+              <div class="brand-symbol">C</div>
+              <div class="brand-text">
+                <span class="brand-title" style="color: #fff;">CE<span style="color: var(--accent-pink);">A</span>RT</span>
+                <span class="brand-sub" style="color: var(--soft-cyan);">Embryology Institute</span>
+              </div>
+            </div>
+          </a>
+          <p>
+            Centre for Embryology &amp; Assisted Reproductive Technology. Dedicated to advancing clinical excellence and
+            empowering medical specialists with hands-on reproductive laboratory expertise.
+          </p>
+          <div class="footer-socials">
+            <a href="#facebook" class="footer-social-btn" aria-label="Facebook">fb</a>
+            <a href="#linkedin" class="footer-social-btn" aria-label="LinkedIn">in</a>
+            <a href="#twitter" class="footer-social-btn" aria-label="Twitter">x</a>
+            <a href="#instagram" class="footer-social-btn" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-1">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About CEART</a></li>
+            <li><a href="programs.html">Academic Courses</a></li>
+            <li><a href="index.html#facilities">Lab Infrastructure</a></li>
+            <li><a href="faculty.html">Faculty Team</a></li>
+            <li><a href="index.html#placements">Student Placements</a></li>
+            <li><a href="gallery.html">Campus Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-2">
+          <h4>Policy &amp; Help</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#admission-process">Admission Guidelines</a></li>
+            <li><a href="index.html#faqs">Frequently Asked Questions</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="index.html#hostel">Hostel &amp; Stay Guidance</a></li>
+            <li><a href="index.html#contact-seo">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="slide-up" class="delay-3">
+          <h4>Flagship Courses</h4>
+          <ul class="footer-links">
+            <li><a href="course-andrology-embryology.html">Andrology &amp; Embryology (6M)</a></li>
+            <li><a href="course-icsi-micromanipulation.html">ICSI &amp; Micromanipulation (2W)</a></li>
+            <li><a href="course-clinical-embryology.html">Clinical Embryology (1M/1Y)</a></li>
+            <li><a href="course-cryopreservation-vitrification.html">Vitrification &amp; Cryo (2W)</a></li>
+            <li><a href="course-basic-advanced-andrology.html">Basic to Advanced Andrology</a></li>
+            <li><a href="programs.html">Explore All 21 Programs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 CEART Institute. All Rights Reserved. Reg. under ART &amp; Medical Education Guidelines.
+        </div>
+        <div>
+          Designed for Clinical Precision &bull; <a href="#">Back to top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Lightweight Gallery Filter & Lightbox Script ================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. Filter Logic
+      var filterButtons = document.querySelectorAll('.filter-btn');
+      var galleryCards = document.querySelectorAll('.gallery-card');
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var targetFilter = this.getAttribute('data-filter');
+
+          // Active toggle
+          filterButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          // Filter cards
+          galleryCards.forEach(function (card) {
+            var cardCategory = card.getAttribute('data-category');
+            if (targetFilter === 'all' || cardCategory === targetFilter) {
+              card.style.display = 'flex';
+              setTimeout(function () {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 30);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(15px)';
+              setTimeout(function () {
+                card.style.display = 'none';
+              }, 250);
+            }
+          });
+        });
+      });
+
+      // 2. Lightbox Modal Logic
+      var lightbox = document.getElementById('galleryLightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxTag = document.getElementById('lightboxTag');
+      var lightboxTitle = document.getElementById('lightboxTitle');
+      var lightboxDesc = document.getElementById('lightboxDesc');
+      var closeBtn = document.getElementById('lightboxClose');
+
+      galleryCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          var img = card.querySelector('.gallery-img');
+          var tag = card.querySelector('.gallery-tag-pill');
+          var title = card.querySelector('.gallery-title');
+          var desc = card.querySelector('.gallery-desc');
+
+          if (img && lightboxImg) {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+          }
+          if (tag && lightboxTag) lightboxTag.textContent = tag.textContent;
+          if (title && lightboxTitle) lightboxTitle.textContent = title.textContent;
+          if (desc && lightboxDesc) lightboxDesc.textContent = desc.textContent;
+
+          lightbox.classList.add('active');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+
+      if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
